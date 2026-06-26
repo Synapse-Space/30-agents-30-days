@@ -1,0 +1,7 @@
+ollama>=0.5.1
+
+# Uncomment if using OpenAI
+# openai
+
+# Uncomment if using Gemini
+# google-generativeai
