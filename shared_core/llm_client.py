@@ -12,8 +12,8 @@ from ollama import chat
 class LLMClient:
     def __init__(
         self,
-        model="qwen3-8b"
-    );
+        model="qwen3:8b"
+    ):
         self.model=model
     
     def invoke(self,messages):

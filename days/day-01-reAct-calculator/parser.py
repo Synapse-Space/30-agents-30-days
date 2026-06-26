@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from re
+import re
 from typing import Optional
 
 @dataclass
@@ -10,7 +10,7 @@ class AgentResponse:
     final_answer:Optional[str]=None
 
 class ReActParser:
-    THOUGH_PATTERN=re.compile(
+    THOUGHT_PATTERN=re.compile(
         r"Thought:\s*(.*?)(?=\n[A-Z][a-zA-Z]*:|$)",
         re.DOTALL
     )
@@ -30,7 +30,7 @@ class ReActParser:
         thought = cls.THOUGHT_PATTERN.search(text)
         action = cls.ACTION_PATTERN.search(text)
         action_input = cls.ACTION_INPUT_PATTERN.search(text)
-        final = cls.FINAL_PATTERN.search(text)
+        final = cls.FINAL_ANSWER_PATTERN.search(text)
 
         return AgentResponse(
             thought=thought.group(1).strip() if thought else None,
