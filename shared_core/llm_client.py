@@ -6,45 +6,54 @@ Default: Ollama
 Alternatives: OpenAI, Gemini
 
 """
-import os
-from ollama import chat
+import json
+from ollama import Client
+
+from shared_core.config import config
+
 
 class LLMClient:
-    def __init__(
-        self,
-        model="qwen3:8b"
-    ):
-        self.model=model
-    
-    def invoke(self,messages):
-        response=chat(
-            model=self.model,
-            messages=messages
-        )
-        return response["message"]["content"]
 
-# ---------------------------------------
-# OpenAI
-# ---------------------------------------
+    def __init__(self):
+
+        self.client = Client()
+
+        self.model = config.OLLAMA_MODEL
+
+    def chat(
+        self,
+        messages,
+        tools=None
+    ):
+
+        response = self.client.chat(
+            model=self.model,
+            messages=messages,
+            tools=tools
+        )
+
+        return response
+
 
 # from openai import OpenAI
 #
 # class LLMClient:
 #
 #     def __init__(self):
-#         self.client = OpenAI(
-#             api_key=os.getenv("OPENAI_API_KEY")
-#         )
 #
-#     def invoke(self, messages):
+#         self.client = OpenAI()
 #
-#         response = self.client.chat.completions.create(
+#     def chat(
+#         self,
+#         messages,
+#         tools=None
+#     ):
+#
+#         return self.client.chat.completions.create(
 #             model="gpt-4.1",
-#             messages=messages
+#             messages=messages,
+#             tools=tools
 #         )
-#
-#         return response.choices[0].message.content
-
 
 # ---------------------------------------
 # Gemini
