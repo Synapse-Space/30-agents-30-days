@@ -25,15 +25,15 @@ class WeatherAPI:
 
         result=data["results"][0]
 
-        return {
+        return (
             result["latitude"],
             result["longitude"]
-        }
+        )
 
     @staticmethod
     def get_weather(city:str):
 
-        latitue,longitude=(
+        latitude,longitude=(
             WeatherAPI.get_coordinate(city)
         )
 
@@ -49,7 +49,7 @@ class WeatherAPI:
                     "weather_code"
                 ]
 
-            }
+            },
             timeout=20
         )
 
@@ -59,7 +59,7 @@ class WeatherAPI:
         return {
             "city":city,
             "temperature": weather["temperature_2m"],
-            "humidity":weather["realtive_humidity_2m"],
+            "humidity":weather["relative_humidity_2m"],
             "wind_speed":weather["wind_speed_10m"],
             "weather_code":weather["weather_code"]
         }

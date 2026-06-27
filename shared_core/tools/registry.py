@@ -22,3 +22,7 @@ class ToolRegistry:
 
         return self.tools[tool_name](**kwargs)
 
+    def list(self):
+        return list(self.tools.keys())
+
+tool_registry = ToolRegistry()
