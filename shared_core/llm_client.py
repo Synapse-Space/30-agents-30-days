@@ -7,6 +7,7 @@ Alternatives: OpenAI, Gemini
 
 """
 import json
+
 from ollama import Client
 
 from shared_core.config import config
@@ -23,37 +24,54 @@ class LLMClient:
     def chat(
         self,
         messages,
-        tools=None
+        tools=None,
+        format=None,
     ):
 
-        response = self.client.chat(
+        return self.client.chat(
             model=self.model,
             messages=messages,
-            tools=tools
+            tools=tools,
+            format=format,
         )
 
-        return response
+    def structured(
+        self,
+        messages,
+        schema,
+    ):
+        """
+        Ask the model to return JSON matching
+        a Pydantic schema.
+        """
 
+        response = self.chat(
+            messages=messages,
+            format=schema.model_json_schema(),
+        )
+
+        return response["message"]["content"]
 
 # from openai import OpenAI
 #
 # class LLMClient:
 #
 #     def __init__(self):
-#
 #         self.client = OpenAI()
 #
-#     def chat(
+#     def structured(
 #         self,
 #         messages,
-#         tools=None
+#         schema,
 #     ):
 #
-#         return self.client.chat.completions.create(
+#         response = self.client.responses.parse(
 #             model="gpt-4.1",
-#             messages=messages,
-#             tools=tools
+#             input=messages,
+#             text_format=schema,
 #         )
+#
+#         return response.output_parsed
 
 # ---------------------------------------
 # Gemini
