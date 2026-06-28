@@ -1,13 +1,10 @@
-"""
-Day 3 - Structured Data Extractor
-
-Run:
-    python main.py
-"""
-
 from rich.console import Console
 from rich.json import JSON
 from rich.panel import Panel
+
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
 from agent import StructuredExtractorAgent
 from sample_emails import EMAILS

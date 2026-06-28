@@ -1,6 +1,7 @@
 from pydantic import ValidationError
 from shared_core.agents import BaseAgent
-from shared_core.json_parser import json_parser
+from shared_core.json_parser import JSONParser
+from shared_core.validator import Validator
 
 from prompts import SYSTEM_PROMPT
 from schemas import ContactInformation
@@ -9,7 +10,7 @@ class StructuredExtractorAgent(BaseAgent):
     MAX_RETRIES=3
     def __init__(self):
         super().__init__(SYSTEM_PROMPT)
-    def _extract(self):
+    def extract(self):
         response =self.structured(ContactInformation)
         self.logger.info("LLM Response:\n%s", response)
         self.add_assistant_message(response)
