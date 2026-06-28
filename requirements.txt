@@ -1,6 +1,7 @@
 ollama>=0.5.1
 requests>=2.32.0
 python-dotenv>=1.0.1
+pydantic>=2.11.0
 
 # Uncomment if using OpenAI
 # openai
