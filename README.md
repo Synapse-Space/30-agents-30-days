@@ -28,9 +28,9 @@ To ensure maximum scalability without vendor lock-in or fragile API dependencies
 | Day | Project Name | Core Patterns & Frameworks | System Design Focus |
 | :--- | :--- | :--- | :--- |
 | **Week 1** | **Foundation & Tool Use** | | |
-| 01 | [Basic Calculator Agent](./days/day-01-react-calculator) | Native Python, ReAct Loop | Stateful Reason-Act-Observe Execution |
+| 01 | [Basic Calculator Agent](./days/day-01-reAct-calculator) | Native Python, ReAct Loop | Stateful Reason-Act-Observe Execution |
 | 02 | [Weather-Buster Assistant](./days/day-02-weather-buster) | OpenAI Tool Calling, REST APIs | JSON Schema Binding & Functional Boundaries |
-| 03 | [Structured Data Extractor](./days/day-03-structured-extractor) | Pydantic, Structured Outputs | Formatting Enforcement & Validation Layers |
+| 03 | [Structured Data Extractor](./days/day-03-structured-data-extractor) | Pydantic, Structured Outputs | Formatting Enforcement & Validation Layers |
 | 04 | [Intelligent SQL Query Builder](./days/day-04-sql-builder) | DB Schema Reflection, Prompt Guardrails | Context Injection & Secure Execution |
 | 05 | [Smart Email Responder](./days/day-05-email-responder) | Intent Classification, Dynamic Templates | Routing Logic & Contextual Hydration |
 | 06 | [CLI File-System Commander](./days/day-06-cli-commander) | Deterministic File OS Modules | Safety Pre-flight Checklists & Risk Mitigation |
