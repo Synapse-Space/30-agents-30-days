@@ -2,8 +2,11 @@ from rich.console import Console
 from rich.panel import Panel 
 from rich.table import Table 
 
-from agent import SQLAgent
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
+from agent import SQLAgent
 console=Console()
 
 

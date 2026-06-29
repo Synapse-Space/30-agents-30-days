@@ -28,8 +28,9 @@ class SQLAgent(StructuredAgent):
             """
         )
         
-        generated=self.generated()
+        generated=self.generate()
         SQLValidator.validate(generated.sql)
+        rows = self.database.execute(generated.sql)
         return {
             "question": question,
             "sql": generated.sql,
