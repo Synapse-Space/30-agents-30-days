@@ -8,7 +8,9 @@ Example:
 """
 
 from .base_agent import BaseAgent
+from .structured_agent import StructuredAgent
 
 __all__ = [
     "BaseAgent",
+    "StructuredAgent"
 ]
