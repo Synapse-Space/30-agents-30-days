@@ -31,8 +31,8 @@ To ensure maximum scalability without vendor lock-in or fragile API dependencies
 | 01 | [Basic Calculator Agent](./days/day-01-reAct-calculator) | Native Python, ReAct Loop | Stateful Reason-Act-Observe Execution |
 | 02 | [Weather-Buster Assistant](./days/day-02-weather-buster) | OpenAI Tool Calling, REST APIs | JSON Schema Binding & Functional Boundaries |
 | 03 | [Structured Data Extractor](./days/day-03-structured-data-extractor) | Pydantic, Structured Outputs | Formatting Enforcement & Validation Layers |
-| 04 | [Intelligent SQL Query Builder](./days/day-04-sql-builder) | DB Schema Reflection, Prompt Guardrails | Context Injection & Secure Execution |
-| 05 | [Smart Email Responder](./days/day-05-email-responder) | Intent Classification, Dynamic Templates | Routing Logic & Contextual Hydration |
+| 04 | [Intelligent SQL Query Builder](./days/day-04-sql-query-builder) | DB Schema Reflection, Prompt Guardrails | Context Injection & Secure Execution |
+| 05 | [Smart Email Responder](./days/day-05-smart-email-responder) | Intent Classification, Dynamic Templates | Routing Logic & Contextual Hydration |
 | 06 | [CLI File-System Commander](./days/day-06-cli-commander) | Deterministic File OS Modules | Safety Pre-flight Checklists & Risk Mitigation |
 | 07 | [Market Watcher Alert Engine](./days/day-07-market-watcher) | Cron Scheduling, State Persistence | Long-polling vs Event-driven Triggers |
 | **Week 2** | **Memory & Multi-Turn State** | | |
