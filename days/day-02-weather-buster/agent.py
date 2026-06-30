@@ -5,6 +5,7 @@ from shared_core.llm_client import LLMClient
 from shared_core.tools.registry import tool_registry
 from tool_schema import WEATHER_TOOL
 from weather_api import WeatherAPI
+from shared_core.prompts.weather import SYSTEM_PROMPT
 
 class WeatherAgent:
 
@@ -16,10 +17,7 @@ class WeatherAgent:
         self.messages=[
             {
                 "role":"system",
-                "content":(
-                    "You are a helpful assistant."
-                    "Use tools whenever necessary."
-                ),
+                "content":SYSTEM_PROMPT,
             }
         ]
     

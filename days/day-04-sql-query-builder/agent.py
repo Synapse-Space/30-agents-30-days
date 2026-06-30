@@ -1,7 +1,7 @@
 from shared_core.agents import StructuredAgent
 from shared_core.database import (SQLiteClient, SchemaLoader)
 from schema import SQLQuery
-from prompts import SYSTEM_PROMPT
+from shared_core.prompts.sql import SYSTEM_PROMPT
 from database import Database
 from sql_validator import SQLValidator
 

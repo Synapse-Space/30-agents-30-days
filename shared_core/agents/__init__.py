@@ -9,8 +9,9 @@ Example:
 
 from .base_agent import BaseAgent
 from .structured_agent import StructuredAgent
-
+from .config import AgentConfig
 __all__ = [
     "BaseAgent",
-    "StructuredAgent"
+    "StructuredAgent",
+    "AgentConfig"
 ]

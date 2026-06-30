@@ -1,6 +1,6 @@
 from shared_core.llm_client import LLMClient
 from shared_core.logger import logger
-from shared_core.prompts.react_prompt import SYSTEM_PROMPT
+from shared_core.prompts.react import SYSTEM_PROMPT
 
 from parser import ReActParser
 from tools import calculator

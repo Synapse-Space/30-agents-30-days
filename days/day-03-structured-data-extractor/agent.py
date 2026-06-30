@@ -3,7 +3,7 @@ from shared_core.agents import BaseAgent
 from shared_core.json_parser import JSONParser
 from shared_core.validator import Validator
 
-from prompts import SYSTEM_PROMPT
+from shared_core.prompts.extractor import SYSTEM_PROMPT
 from schemas import ContactInformation
 
 class StructuredExtractorAgent(BaseAgent):
