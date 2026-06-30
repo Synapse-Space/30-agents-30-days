@@ -20,7 +20,7 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 from typing import Any
 
-from shared_core.llm_client import LLMClient
+from shared_core.providers.llm import LLMFactory
 from shared_core.logger import logger
 
 
@@ -35,7 +35,7 @@ class BaseAgent(ABC):
 
         self.logger = logger
 
-        self.llm = LLMClient()
+        self.llm = LLMFactory.create()
 
         self.messages: list[dict[str, Any]] = []
 
