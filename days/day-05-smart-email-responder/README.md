@@ -74,3 +74,33 @@ Draft Reply
 - Structured AI outputs
 - Human-in-the-loop readiness
 - Enterprise email automation
+
+---
+
+## Folder Structure
+
+```
+day-05-smart-email-responder/
+├── agent.py           # The EmailAssistantAgent integrating the prompt and LLM call
+├── main.py            # Terminal interface using 'rich' for an interactive prompt
+├── sample_emails.py   # Collection of sample emails mapping to various intents
+└── schemas.py         # Pydantic models (e.g. EmailResponse) for structuring LLM output
+```
+
+*Note: This project relies on `shared_core/agents/structured_agent.py` and `shared_core/prompts/email.py` to seamlessly parse and validate the LLM's JSON and provide the core prompt.*
+
+---
+
+## Setup & Running
+
+1. **Activate the Environment:**
+   Ensure you are running within the project's virtual environment.
+   ```bash
+   source ../../venv/bin/activate
+   ```
+
+2. **Run the Agent:**
+   Launch the main interactive query loop.
+   ```bash
+   python main.py
+   ```
