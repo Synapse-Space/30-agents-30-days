@@ -1,40 +1,30 @@
-from shared_core.llm_client import LLMClient
-from shared_core.logger import logger
+from shared_core.agents import BaseAgent
 from shared_core.prompts.react import SYSTEM_PROMPT
 
 from parser import ReActParser
 from tools import calculator
 
-class ReActAgent:
+class ReActAgent(BaseAgent):
     def __init__(self):
-        self.llm=LLMClient()
-        self.messages=[{
-            "role":"system",
-            "content":SYSTEM_PROMPT
-        }]
+        super().__init__(SYSTEM_PROMPT)
         self.tools={
             "calculator":calculator
         }
 
     def run(self, user_query:str):
-        self.messages.append({
-            "role":"user",
-            "content":user_query
-        })
+        self.add_user_message(user_query)
 
         max_iterations=5
 
         for step in range(max_iterations):
-            logger.info("="*70)
-            logger.info(f"Iteration {step+1}")
+            self.logger.info("="*70)
+            self.logger.info(f"Iteration {step+1}")
 
-            reply=self.llm.invoke(self.messages)
-            logger.info("\nLLM RESPONSE\n%s",reply)
+            response=self.chat()
+            reply=response["message"]["content"]
+            self.logger.info("\nLLM RESPONSE\n%s",reply)
 
-            self.messages.append({
-                "role":"assistant",
-                "content":reply
-            })
+            self.add_assistant_message(reply)
 
             parsed=ReActParser.parse(reply)
 
@@ -70,10 +60,7 @@ class ReActAgent:
             print("-"*30)
             print(parsed.action_input)
 
-            self.messages.append({
-                "role":"user",
-                "content":f"Observation: {observation}"
-            })
+            self.add_user_message(f"Observation: {observation}")
         print("\nMaximum iterations reached.")
 
         return None

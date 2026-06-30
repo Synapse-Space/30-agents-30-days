@@ -3,7 +3,7 @@ from shared_core.config import config
 from .base import BaseLLM
 
 class OllamaClient(BaseLLM):
-    def __init(self):
+    def __init__(self):
         self.client=Client(
             host=config.OLLAMA_HOST
         )

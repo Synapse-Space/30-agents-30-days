@@ -24,4 +24,11 @@ class EmailResponse(BaseModel):
         "negative",
     ]
     summary:str 
+
+    confidence: float=Field(
+        ge=0,
+        le=1,
+        description="Confidence score between 0 and 1."
+    )
+
     draft_response:str

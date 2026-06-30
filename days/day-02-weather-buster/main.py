@@ -16,7 +16,7 @@ def main():
         if query.lower() in ["exit", "quit"]:
             break
 
-        answer=agent.chat(query)
+        answer=agent.run(query)
         print("\nAgent\n")
 
         print(answer)
