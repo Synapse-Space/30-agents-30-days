@@ -5,7 +5,6 @@ from pydantic import BaseModel
 from shared_core.tools import (
     BaseTool,
     ToolResult,
-    ToolMetadata,
 )
 
 from workspace import Workspace
@@ -22,11 +21,8 @@ class CreateDirectoryArgs(BaseModel):
 
 class CreateDirectoryTool(BaseTool):
 
-    metadata = ToolMetadata(
-        name="create_directory",
-        description="Create a new directory.",
-        category="filesystem",
-    )
+    name = "create_directory"
+    description = "Create a new directory."
 
     args_schema = CreateDirectoryArgs
 

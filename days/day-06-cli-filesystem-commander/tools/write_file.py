@@ -3,7 +3,6 @@ from pydantic import BaseModel
 from shared_core.tools import (
     BaseTool,
     ToolResult,
-    ToolMetadata,
 )
 
 from workspace import Workspace
@@ -22,11 +21,8 @@ class WriteFileArgs(BaseModel):
 
 class WriteFileTool(BaseTool):
 
-    metadata = ToolMetadata(
-        name="write_file",
-        description="Overwrite a text file.",
-        category="filesystem",
-    )
+    name = "write_file"
+    description = "Overwrite a text file."
 
     args_schema = WriteFileArgs
 

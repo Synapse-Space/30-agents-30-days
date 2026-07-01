@@ -1,6 +1,6 @@
 
 from shared_core.agents import ToolAgent
-from shared_core.llms import LLMFactory
+from shared_core.providers.llm import LLMFactory
 
 from tools.create_file import CreateFileTool
 from tools.read_file import ReadFileTool
@@ -38,9 +38,9 @@ class FileSystemAgent(ToolAgent):
             system_prompt=SYSTEM_PROMPT
         )
 
-        self.add_tool(CreateFileTool())
-        self.add_tool(ReadFileTool())
-        self.add_tool(WriteFileTool())
-        self.add_tool(DeleteFileTool())
-        self.add_tool(CreateDirectoryTool())
-        self.add_tool(ListDirectoryTool())
+        self.register_tool(CreateFileTool())
+        self.register_tool(ReadFileTool())
+        self.register_tool(WriteFileTool())
+        self.register_tool(DeleteFileTool())
+        self.register_tool(CreateDirectoryTool())
+        self.register_tool(ListDirectoryTool())

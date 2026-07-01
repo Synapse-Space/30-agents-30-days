@@ -5,7 +5,6 @@ from pydantic import BaseModel
 from shared_core.tools import (
     BaseTool,
     ToolResult,
-    ToolMetadata,
 )
 
 from workspace import Workspace
@@ -24,11 +23,8 @@ class CreateFileArgs(BaseModel):
 
 class CreateFileTool(BaseTool):
 
-    metadata = ToolMetadata(
-        name="create_file",
-        description="Create a new text file.",
-        category="filesystem",
-    )
+    name = "create_file"
+    description = "Create a new text file."
 
     args_schema = CreateFileArgs
 

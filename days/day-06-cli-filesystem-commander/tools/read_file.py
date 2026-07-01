@@ -3,7 +3,6 @@ from pydantic import BaseModel
 from shared_core.tools import (
     BaseTool,
     ToolResult,
-    ToolMetadata,
 )
 
 from workspace import Workspace
@@ -20,11 +19,8 @@ class ReadFileArgs(BaseModel):
 
 class ReadFileTool(BaseTool):
 
-    metadata = ToolMetadata(
-        name="read_file",
-        description="Read a text file.",
-        category="filesystem",
-    )
+    name = "read_file"
+    description = "Read a text file."
 
     args_schema = ReadFileArgs
 

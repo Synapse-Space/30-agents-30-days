@@ -75,3 +75,6 @@ def main():
         print(result)
 
         print("\n")
+
+if __name__ == "__main__":
+    main()

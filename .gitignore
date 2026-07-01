@@ -1,4 +1,7 @@
 venv
 __pycache__
-
 .env
+*.egg-info/
+*.db
+*.sqlite3
+.DS_Store
