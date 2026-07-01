@@ -1,28 +1,46 @@
-from typing import Callable
+
+from typing import Dict
+
+from .base_tool import BaseTool
+
 
 class ToolRegistry:
+
     def __init__(self):
-        self.tools={}
+
+        self.tools: Dict[
+            str,
+            BaseTool,
+        ] = {}
 
     def register(
         self,
-        name:str,
-        func:Callable
+        tool: BaseTool,
     ):
 
-        self.tools[name]=func
-    
-    def execute(
-        self, 
-        tool_name:str,
-        **kwargs
+        self.tools[
+            tool.name
+        ] = tool
+
+    def get(
+        self,
+        name: str,
     ):
-        if tool_name not in self.tools:
-            raise ValueError(f"Tool '{tool_name}' not found.")
 
-        return self.tools[tool_name](**kwargs)
+        return self.tools.get(name)
 
-    def list(self):
-        return list(self.tools.keys())
+    def schemas(self):
 
-tool_registry = ToolRegistry()
+        return [
+
+            tool.schema()
+
+            for tool in self.tools.values()
+
+        ]
+
+    def list_tools(self):
+
+        return list(
+            self.tools.keys()
+        )
