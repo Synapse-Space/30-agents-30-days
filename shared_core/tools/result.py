@@ -1,9 +1,12 @@
-from dataclasses import dataclass 
-from typing import Any 
+from typing import Any
 
-@dataclass(slots=True)
-class ToolResult:
+from pydantic import BaseModel
+
+
+class ToolResult(BaseModel):
+
     success: bool
+
     message: str
-    data: Any=None
-    
+
+    data: Any | None = None

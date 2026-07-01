@@ -10,8 +10,10 @@ Example:
 from .base_agent import BaseAgent
 from .structured_agent import StructuredAgent
 from .config import AgentConfig
+from .tool_agent import ToolAgent
 __all__ = [
     "BaseAgent",
     "StructuredAgent",
+    "ToolAgent",
     "AgentConfig"
 ]
