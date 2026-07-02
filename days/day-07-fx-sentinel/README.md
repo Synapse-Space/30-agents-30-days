@@ -68,3 +68,38 @@ ALERT
 
 Threshold Crossed
 ```
+
+---
+
+## Folder Structure
+
+```text
+day-07-fx-sentinel/
+├── agent.py               # FXSentinelAgent inheriting from StatefulAgent
+├── main.py                # Interactive CLI loop
+├── market_provider.py     # Real-time exchange rate API integration
+├── alert_engine.py        # Logic to check threshold crossings
+├── sample_rules.py        # Configured currency rules
+└── storage/
+    └── state.json         # Persistent context and market state
+```
+
+*Note: This day utilizes the modularized `shared_core` library—specifically `shared_core.agents.stateful_agent` and `shared_core.context`, which provide the base classes for state persistence.*
+
+---
+
+## Setup & Running
+
+1. **Ensure `shared_core` is Installed:**
+   Make sure you have run the root `pip install -e .` so the environment can locate `shared_core`.
+   ```bash
+   source ../../venv/bin/activate
+   # If not installed yet, run this from the project root:
+   # pip install -e .
+   ```
+
+2. **Run the Agent:**
+   Launch the interactive Sentinel interface.
+   ```bash
+   python main.py
+   ```
