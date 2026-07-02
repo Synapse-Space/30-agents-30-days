@@ -11,10 +11,10 @@ class JSONStateStore:
         if not self.path.exists():
             self.save({})
 
-        def load(self)->dict[str,Any]:
-            with open(self.path,"r",encoding="utf-8") as file:
-                return json.load(file)
+    def load(self)->dict[str,Any]:
+        with open(self.path,"r",encoding="utf-8") as file:
+            return json.load(file)
 
-        def save(self,data: dict[str,Any]):
-            with open(self.path,"w",encoding="utf-8") as file:
-                json.dump(data,file,indent=4)
+    def save(self,data: dict[str,Any]):
+        with open(self.path,"w",encoding="utf-8") as file:
+            json.dump(data,file,indent=4)

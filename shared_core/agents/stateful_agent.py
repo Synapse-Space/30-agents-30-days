@@ -8,7 +8,7 @@ class StatefulAgent(BaseAgent):
 
         self.context_manager=(ContextManager())
 
-    def load_context(self,, session_id=None):
+    def load_context(self, session_id=None):
         return self.context_manager.load_context(session_id)
     
     def save_context(self,context):

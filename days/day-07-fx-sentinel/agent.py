@@ -29,5 +29,18 @@ class FXSentinelAgent(StatefulAgent):
             "alert":triggered
         }
 
+    def run(self, alert_data: dict) -> str:
+        self.clear_history()
+        
+        base = alert_data.get("base")
+        target = alert_data.get("target")
+        rate = alert_data.get("current_rate")
+        
+        prompt = f"The currency pair {base}/{target} just hit a rate of {rate}. Please provide a brief 1-2 sentence explanation of what this might mean for the market."
+        self.add_user_message(prompt)
+        
+        response = self.chat()
+        return response.get("message", {}).get("content", "No explanation generated.")
+
 
     

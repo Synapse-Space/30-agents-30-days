@@ -1,0 +1,30 @@
+{
+    "dba314ef-3f6a-4716-8e3a-8d0c86fa1ec8": {
+        "GBP_INR": {
+            "last_rate": 126.94,
+            "threshold": 118.0,
+            "direction": "below"
+        }
+    },
+    "2548daa0-1105-4e7d-8762-bad088fff176": {
+        "USD_INR": {
+            "last_rate": 95.39,
+            "threshold": 87.5,
+            "direction": "above"
+        }
+    },
+    "56ceecaa-40bc-4dec-98c1-d28fb71a0f5a": {
+        "EUR_INR": {
+            "last_rate": 108.7435,
+            "threshold": 102.0,
+            "direction": "above"
+        }
+    },
+    "8c24b030-26c6-4362-88f8-7ee2d6504810": {
+        "GBP_INR": {
+            "last_rate": 126.94,
+            "threshold": 118.0,
+            "direction": "below"
+        }
+    }
+}
