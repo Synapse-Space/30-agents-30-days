@@ -1,9 +1,9 @@
-from .memory import ConverastionHistory
+from .memory import ConversationMemory
 
 class ConversationManager:
 
     def __init__(self):
-        self.memory=ConverastionHistory()
+        self.memory=ConversationMemory()
 
     def add_user_message(self, text:str):
         self.memory.history.add("user",text)

@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field
 from .message import ChatMessage
 
-class ConverastionHistory(BaseModel):
+class ConversationHistory(BaseModel):
     messages:list[ChatMessage]=Field(default_factory=list)
 
     def add(self,role:str, content:str):

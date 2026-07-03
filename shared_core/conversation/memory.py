@@ -1,8 +1,8 @@
 from pydantic import BaseModel, Field
-from .history import ConverastionHistory
+from .history import ConversationHistory
 
-class ConverastionMemory(BaseModel):
-    history: ConverastionHistory=Field(default_factory=ConverastionHistory)
+class ConversationMemory(BaseModel):
+    history: ConversationHistory=Field(default_factory=ConversationHistory)
     metadata: dict=Field(default_factory=dict)
 
 
