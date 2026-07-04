@@ -36,8 +36,8 @@ To ensure maximum scalability without vendor lock-in or fragile API dependencies
 | 06 | [CLI File-System Commander](./days/day-06-cli-filesystem-commander) | Deterministic File OS Modules | Safety Pre-flight Checklists & Risk Mitigation |
 | 07 | [Market Watcher Alert Engine](./days/day-07-fx-sentinel) | Cron Scheduling, State Persistence | Long-polling vs Event-driven Triggers |
 | **Week 2** | **Memory & Multi-Turn State** | | |
-| 08 | [Conversational Reminder Bot](./days/day-08-reminder-bot) | Short-term Memory Context | Entity Extraction & Temporal Parsing |
-| 09 | [User Onboarding State-Machine](./days/day-09-user-onboarding) | Linear Dialogues, Strict Boundaries | Context Lockouts & Multi-turn Validation |
+| 08 | [Conversational Reminder Bot](./days/day-08-conversational-reminder-bot) | Short-term Memory Context | Entity Extraction & Temporal Parsing |
+| 09 | [User Onboarding State-Machine](./days/day-09-user-profile-onboarding) | Linear Dialogues, Strict Boundaries | Context Lockouts & Multi-turn Validation |
 | 10 | [Multi-Session Memory Chatbot](./days/day-10-multisession-memory) | PostgreSQL Database Drivers | Long-term Memory Hydration & Session Keys |
 | 11 | [Deterministic FAQ Guardrail](./days/day-11-faq-guardrail) | Rasa Open Source Logic | Merging Rule-based Intents with LLM Fallbacks |
 | 12 | [Contextual Document Q&A](./days/day-12-document-qa) | Native Text Chunking, In-memory Search | Word Windowing & Overlap Trade-offs |

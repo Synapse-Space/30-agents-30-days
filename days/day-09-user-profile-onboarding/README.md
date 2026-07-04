@@ -77,3 +77,38 @@ yuvraj@gmail.com
 
 Profile Created
 ```
+
+---
+
+## Folder Structure
+
+```text
+day-09-user-profile-onboarding/
+├── agent.py               # OnboardingAgent implementing the FSM workflow
+├── main.py                # Interactive CLI loop
+├── models.py              # Pydantic data models for the User Profile
+├── prompts.py             # System prompts for the agent
+├── sample_input.py        # Example inputs for testing
+├── validators.py          # Validation logic for email, phone, etc.
+└── workflow.py            # FSM (Finite State Machine) state definitions
+```
+
+*Note: This day utilizes the `shared_core` library—specifically `shared_core.agents.workflow_agent` and `shared_core.workflow`, which provide the base classes for finite state machines.*
+
+---
+
+## Setup & Running
+
+1. **Ensure `shared_core` is Installed:**
+   Make sure you have run the root `pip install -e .` so the environment can locate `shared_core`.
+   ```bash
+   source ../../venv/bin/activate
+   # If not installed yet, run this from the project root:
+   # pip install -e .
+   ```
+
+2. **Run the Agent:**
+   Launch the interactive onboarding workflow.
+   ```bash
+   python main.py
+   ```
