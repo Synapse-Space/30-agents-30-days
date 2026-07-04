@@ -21,3 +21,16 @@ def validate_country(value: str)-> bool:
         value.lower() in SUPPORTED_COUNTRIES
     )
 
+def validate_phone(
+    value: str,
+) -> bool:
+
+    pattern = r"^\+?[0-9]{10,15}$"
+
+    return bool(
+        re.match(
+            pattern,
+            value,
+        )
+    )
+
