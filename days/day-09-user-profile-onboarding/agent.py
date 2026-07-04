@@ -18,8 +18,11 @@ class OnboardingAgent(WorkflowAgent):
         self.workflow=(OnboardingWorkflow())
         self.profile=(UserProfile())
 
-    def current_profile(self):
+    def current_prompt(self):
         return (self.workflow.machine.state().prompt)
+
+    def run(self, *args, **kwargs):
+        pass
 
     
     def process(self,user_input:str):
@@ -65,7 +68,7 @@ class OnboardingAgent(WorkflowAgent):
         next_state=(self.workflow.machine.state())
 
         if next_state.terminal:
-            slef.profile.completed=True
+            self.profile.completed=True
             return {
                  "success": True,
 
