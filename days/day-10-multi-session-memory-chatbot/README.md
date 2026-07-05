@@ -88,3 +88,44 @@ What's my favorite editor?
 Assistant:
 
 Your favorite editor is VS Code.
+
+---
+
+## Folder Structure
+
+```text
+day-10-multi-session-memory-chatbot/
+├── agent.py               # MemoryChatbot integrating LLM extraction & memory recall
+├── main.py                # Interactive CLI, DB connection & agent instantiation
+├── memory_extractor.py    # Interfaces with LLM to extract key-value facts
+├── models.py              # Pydantic schema for ExtractedMemory
+├── prompts.py             # System instructions & few-shot JSON examples
+└── sample_inputs.py       # Example interactions for testing
+```
+
+*Note: This agent heavily relies on the `shared_core.memory` package, which houses the repository pattern implementation, Pydantic data models for the database, and the PostgreSQL driver adapter (`psycopg3`).*
+
+---
+
+## Setup & Running
+
+1. **Database Setup:**
+   Ensure your local PostgreSQL or Docker equivalent (`ai-memory-db`) is running and the database `ai_agents` exists. 
+   Apply the memory schema (from the project root):
+   ```bash
+   psql postgresql://postgres:postgres@localhost:5432/ai_agents -f shared_core/agents/schema.sql
+   ```
+
+2. **Python Environment:**
+   Ensure `shared_core` is installed and `psycopg` is available:
+   ```bash
+   source ../../venv/bin/activate
+   pip install psycopg[binary]
+   # if you haven't already: pip install -e .
+   ```
+
+3. **Run the Application:**
+   Enter an arbitrary User ID to start a session. Any facts stated will persist across application restarts for that specific ID!
+   ```bash
+   python main.py
+   ```
