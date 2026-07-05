@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+
+  postgres:
+
+    image: pgvector/pgvector:pg16
+
+    container_name: ai-memory-db
+
+    restart: always
+
+    environment:
+
+      POSTGRES_USER: postgres
+
+      POSTGRES_PASSWORD: postgres
+
+      POSTGRES_DB: ai_agents
+
+    ports:
+
+      - "5432:5432"
+
+    volumes:
+
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+
+  postgres_data:
