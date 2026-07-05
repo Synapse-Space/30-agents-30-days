@@ -27,6 +27,7 @@ class MemoryRepository:
                         memory.value,
                         memory.created_at
                     ))
+                conn.commit()
 
     def find_by_user(self, user_id:str):
         with self.postgres.connection() as conn:

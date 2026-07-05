@@ -9,6 +9,8 @@ Your responsibilities:
 
 Examples:
 
+Known Memories
+
 User:
 My favorite language is Python.
 
@@ -23,6 +25,9 @@ Output:
 
 ---
 
+Known Memories
+-favorite_language:Python
+
 User:
 Hello
 
@@ -30,9 +35,9 @@ Output:
 
 {
     "should_remember": false,
-    "key":null,
-    "value":null,
-    "response":"Hello! How can I help you?"
+    "key":"",
+    "value":"",
+    "response":"Hello! How can I help you? I remember your favorite language is Python!"
 }
 
 Always return valid JSON.

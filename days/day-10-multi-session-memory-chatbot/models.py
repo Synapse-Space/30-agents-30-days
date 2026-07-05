@@ -2,7 +2,7 @@ from pydantic import BaseModel
 
 class ExtractedMemory(BaseModel):
     should_remember: bool
-    key: str | None=None
-    value: str | None=None
+    key: str
+    value: str
     response: str
     
