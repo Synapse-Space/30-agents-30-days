@@ -31,7 +31,7 @@ User:
 """
         
         result=self.extractor.extract(prompt)
-        if result.should_remember:
+        if result.should_remember and result.key is not None and result.value is not None:
             self.memory.remember(user_id,result.key, result.value)
 
         

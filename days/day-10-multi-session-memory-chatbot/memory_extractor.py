@@ -5,5 +5,6 @@ class MemoryExtractor:
         self.llm=llm
 
     def extract(self,text:str)->ExtractedMemory:
-        return self.llm.generate_structured_output(prompt=text,output_model=ExtractedMemory)
+        response = self.llm.structured(messages=[{"role": "user", "content": text}], schema=ExtractedMemory)
+        return ExtractedMemory.model_validate_json(response)
         
