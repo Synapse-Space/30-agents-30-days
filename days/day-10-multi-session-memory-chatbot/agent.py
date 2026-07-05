@@ -8,6 +8,9 @@ class MemoryChatbot(MemoryAgent):
 
         self.extractor=(MemoryExtractor(llm))
 
+    def run(self, *args, **kwargs):
+        pass
+
     def chat(self, user_id:str,message:str):
         memories=self.memory.recall(user_id)
         context=""

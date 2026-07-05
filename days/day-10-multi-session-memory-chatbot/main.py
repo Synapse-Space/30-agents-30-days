@@ -19,7 +19,7 @@ from shared_core.memory.manager import (
     MemoryManager,
 )
 
-from shared_core.llm_client import OllamaClient
+from shared_core.llm_client import LLMClient
 
 console = Console()
 
@@ -54,7 +54,7 @@ def main():
 
     manager = MemoryManager(repository)
 
-    llm = OllamaClient()
+    llm = LLMClient()
 
     chatbot = MemoryChatbot(
 
