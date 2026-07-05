@@ -6,7 +6,7 @@ class MemoryManager:
 
     
     
-    def remembet(self, user_id, key, value):
+    def remember(self, user_id, key, value):
         memory=Memory(
             user_id=user_id,
             key=key,

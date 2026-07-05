@@ -27,8 +27,8 @@ User:
 {message}
 """
         
-         result=self.extractor.extract(prompt)
-         if result.should_remember:
+        result=self.extractor.extract(prompt)
+        if result.should_remember:
             self.memory.remember(user_id,result.key, result.value)
 
         

@@ -5,6 +5,7 @@ from .stateful_agent import StatefulAgent
 from .config import AgentConfig
 from .conversation_agent import ConversationAgent
 from .workflow_agent import WorkflowAgent
+from .memory_agent import MemoryAgent
 
 __all__ = [
     "BaseAgent",
@@ -13,5 +14,6 @@ __all__ = [
     "StatefulAgent",
     "ConversationAgent",
     "WorkflowAgent",
+    "MemoryAgent",
     "AgentConfig",
 ]

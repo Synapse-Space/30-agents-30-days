@@ -7,8 +7,8 @@ class MemoryRepository:
 
     
     def save(self,memory:Memory):
-        with self,postgres.connection() as conn:
-            withconn.cursor() as cur:
+        with self.postgres.connection() as conn:
+            with conn.cursor() as cur:
                 cur.execute( """
                     INSERT INTO memories
                     (
@@ -32,6 +32,6 @@ class MemoryRepository:
         with self.postgres.connection() as conn:
             with conn.cursor() as cur:
                 cur.execute("""
-                SELECT key,value FROM memories WHERE user_id=%s""",(user_id))
+                SELECT key,value FROM memories WHERE user_id=%s""", (user_id,))
 
                 return cur.fetchall()
