@@ -1,4 +1,4 @@
-from rapidfuz import fuzz
+from rapidfuzz import fuzz
 from shared_core.routing import (BaseMatcher, Route, RouteResult)
 from faq_repository import FAQRepository
 
@@ -17,14 +17,14 @@ class FAQMatcher(BaseMatcher):
                 best_score=score
                 best_faq=faq
 
-        if ( bast_faq and best_score >=self.threshold):
+        if ( best_faq and best_score >=self.threshold):
             return RouteResult(
                 matched=True,
                 confidence= best_score/100.0,
                 route=Route(
                     name="faq",
                     handler="faq"
-                )
+                ),
                 message=best_faq.answer 
             )
         

@@ -34,11 +34,21 @@ class FAQGuardrailAgent(GuardrailAgent):
                 "response":result.message
             }
         
-        self._log_unknown(user_input)
+        self.log_unknown(user_input)
         llm_response=self.generate_from_llm(user_input)
 
         return {
             "source":"LLM",
             "response":llm_response
         }
-        
+
+    def run(self, user_input: str):
+        return self.chat(user_input)
+
+    def generate_from_llm(self, user_input: str):
+        self.user(user_input)
+        msgs = [{"role": m.role, "content": m.content} for m in self.conversation.messages()]
+        response = self.llm.chat(messages=msgs)
+        content = response["message"]["content"]
+        self.assistant(content)
+        return content
