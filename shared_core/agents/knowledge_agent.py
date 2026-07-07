@@ -1,5 +1,16 @@
-from shared_core.knowledge import (DocumentLoader,ParagraphSplitter,Chunker)
+from shared_core.knowledge import (
 
+    DocumentLoader,
+
+    ParagraphSplitter,
+
+    Chunker,
+
+    KeywordIndex,
+
+    KeywordRetriever,
+
+)
 from .gaurdrail_agent import GaurdrailAgent 
 
 class KnowledgeAgent(GaurdrailAgent):
@@ -8,8 +19,10 @@ class KnowledgeAgent(GaurdrailAgent):
         self.loader=DocumentLoader()
         self.splitter=ParagraphSplitter()
         self.chunker=Chunker()
+        self.index=KeywordIndex()
+        self.retriever=KeywordRetriever(self.index)
     
-    def load_documents(self, folder:str):
+    def load_documents(self, folder):
         documents = self.loader.load_directory(folder)
         all_chunks=[]
 
@@ -19,6 +32,11 @@ class KnowledgeAgent(GaurdrailAgent):
             chunks=self.chunker.chunk(document,paragraphs)
 
             all_chunks.extend(chunks)
+
+        self.index.build(all_chunks)
         
-        return all_chunks
+        return len(all_chunks)
+
+    def search(self,question):
+        return self.retriever.retrieve(question)
         
