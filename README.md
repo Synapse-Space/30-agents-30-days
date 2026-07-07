@@ -39,7 +39,7 @@ To ensure maximum scalability without vendor lock-in or fragile API dependencies
 | 08 | [Conversational Reminder Bot](./days/day-08-conversational-reminder-bot) | Short-term Memory Context | Entity Extraction & Temporal Parsing |
 | 09 | [User Onboarding State-Machine](./days/day-09-user-profile-onboarding) | Linear Dialogues, Strict Boundaries | Context Lockouts & Multi-turn Validation |
 | 10 | [Multi-Session Memory Chatbot](./days/day-10-multi-session-memory-chatbot) | PostgreSQL Database Drivers | Long-term Memory Hydration & Session Keys |
-| 11 | [Deterministic FAQ Guardrail](./days/day-11-faq-guardrail) | Rasa Open Source Logic | Merging Rule-based Intents with LLM Fallbacks |
+| 11 | [Deterministic FAQ Guardrail](./days/day-11-deterministic-faq-guardrail) | RapidFuzz, Rule-Based Routing | Merging Rule-based Intents with LLM Fallbacks |
 | 12 | [Contextual Document Q&A](./days/day-12-document-qa) | Native Text Chunking, In-memory Search | Word Windowing & Overlap Trade-offs |
 | 13 | [Customer Support Router](./days/day-13-support-router) | Sentiment Analysis, Escalation Triggers | Conditional Routing & Dynamic System Prompts |
 | 14 | [Automated Code Reviewer](./days/day-14-code-reviewer) | Abstract Syntax Trees (AST), Local Models | Code Structural Analysis & Static Guardrails |

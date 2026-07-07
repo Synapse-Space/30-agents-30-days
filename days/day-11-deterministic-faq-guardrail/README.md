@@ -47,6 +47,22 @@ Matched?
 
 ---
 
+## Usage
+
+1. **Install Dependencies:** (Done in project root)
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. **Run the Agent:**
+   ```bash
+   python main.py
+   ```
+3. **Interact:**
+   - **Known Queries** (e.g., "how can i reset my password?"): Answered instantly by the FAQ.
+   - **Unknown Queries** (e.g., "how to create a new account?"): Sent to the LLM and logged to `unknown_questions.json` for review.
+
+---
+
 ## Example
 
 Question
@@ -73,4 +89,4 @@ Explain Neural Radiance Fields.
 
 ↓
 
-LLM
+LLM (Also logs question to `unknown_questions.json`)
