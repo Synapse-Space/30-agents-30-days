@@ -13,7 +13,7 @@ class Document:
 
 @dataclass(slots=True)
 class Chunk:
-    id:str=firld(default_factory=lambda:str(uuid4()))
+    id:str=field(default_factory=lambda:str(uuid4()))
     document_id:str=""
     chunk_number:int=0
     text:str=""

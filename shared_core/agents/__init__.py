@@ -7,6 +7,7 @@ from .conversation_agent import ConversationAgent
 from .workflow_agent import WorkflowAgent
 from .memory_agent import MemoryAgent
 from .guardrail_agent import GuardrailAgent
+from .knowledge_agent import KnowledgeAgent
 
 __all__ = [
     "BaseAgent",
@@ -18,4 +19,5 @@ __all__ = [
     "MemoryAgent",
     "GuardrailAgent",
     "AgentConfig",
+    "KnowledgeAgent",
 ]

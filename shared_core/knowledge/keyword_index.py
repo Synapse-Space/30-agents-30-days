@@ -11,5 +11,5 @@ class KeywordIndex:
             tokens=self.tokenizer.tokenize(chunk.text)
 
             for token in tokens:
-                self.index[token].append(chunks)
+                self.index[token].append(chunk)
                 

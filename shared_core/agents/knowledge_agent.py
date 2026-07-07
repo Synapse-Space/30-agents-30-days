@@ -11,9 +11,9 @@ from shared_core.knowledge import (
     KeywordRetriever,
 
 )
-from .gaurdrail_agent import GaurdrailAgent 
+from .guardrail_agent import GuardrailAgent 
 
-class KnowledgeAgent(GaurdrailAgent):
+class KnowledgeAgent(GuardrailAgent):
     def __init__(self, system_prompt, memory_manager):
         super().__init__(system_prompt, memory_manager)
         self.loader=DocumentLoader()
