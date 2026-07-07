@@ -6,7 +6,7 @@ from .config import AgentConfig
 from .conversation_agent import ConversationAgent
 from .workflow_agent import WorkflowAgent
 from .memory_agent import MemoryAgent
-from .gaurdrail_agent import GaurdrailAgent
+from .guardrail_agent import GuardrailAgent
 
 __all__ = [
     "BaseAgent",
@@ -16,6 +16,6 @@ __all__ = [
     "ConversationAgent",
     "WorkflowAgent",
     "MemoryAgent",
-    "GaurdrailAgent",
+    "GuardrailAgent",
     "AgentConfig",
 ]

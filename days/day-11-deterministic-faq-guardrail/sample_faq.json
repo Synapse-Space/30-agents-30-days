@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What are your business hours?",
+        "answer": "We are open Monday to Friday from 9 AM to 6 PM."
+    },
+    {
+        "question": "How can I reset my password?",
+        "answer": "Click on 'Forgot Password' on the login page."
+    },
+    {
+        "question": "What is your refund policy?",
+        "answer": "Refund requests are accepted within 30 days."
+    },
+    {
+        "question": "How can I contact support?",
+        "answer": "Email support@example.com."
+    },
+    {
+        "question": "Where are you located?",
+        "answer": "Our headquarters are in Chandigarh, India."
+    }
+]

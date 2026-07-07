@@ -3,6 +3,7 @@ requests>=2.32.0
 python-dotenv>=1.0.1
 pydantic>=2.11.0
 rich>=14.0.0
+rapidfuzz>=3.18.0
 # Uncomment if using OpenAI
 # openai
 
