@@ -1,0 +1,5 @@
+Artificial Intelligence enables machines to perform tasks that typically require human intelligence.
+
+Machine Learning is a subset of AI.
+
+Deep Learning is a subset of Machine Learning.

@@ -1,0 +1,7 @@
+PostgreSQL is an open-source relational database.
+
+It supports ACID transactions.
+
+PostgreSQL can be extended using pgvector.
+
+It is commonly used in production systems.

@@ -1,0 +1,7 @@
+Python is an interpreted programming language.
+
+It supports procedural, object-oriented and functional programming.
+
+Python was created by Guido van Rossum in 1991.
+
+Python is widely used in AI and Machine Learning.
