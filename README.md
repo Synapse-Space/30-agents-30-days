@@ -41,7 +41,7 @@ To ensure maximum scalability without vendor lock-in or fragile API dependencies
 | 10 | [Multi-Session Memory Chatbot](./days/day-10-multi-session-memory-chatbot) | PostgreSQL Database Drivers | Long-term Memory Hydration & Session Keys |
 | 11 | [Deterministic FAQ Guardrail](./days/day-11-deterministic-faq-guardrail) | RapidFuzz, Rule-Based Routing | Merging Rule-based Intents with LLM Fallbacks |
 | 12 | [Contextual Document Q&A](./days/day-12-contextual-document-qa) | Native Text Chunking, In-memory Search | Word Windowing & Overlap Trade-offs |
-| 13 | [Customer Support Router](./days/day-13-support-router) | Sentiment Analysis, Escalation Triggers | Conditional Routing & Dynamic System Prompts |
+| 13 | [Customer Support Router](./days/day-13-customer-support-routing) | Sentiment Analysis, Escalation Triggers | Conditional Routing & Dynamic System Prompts |
 | 14 | [Automated Code Reviewer](./days/day-14-code-reviewer) | Abstract Syntax Trees (AST), Local Models | Code Structural Analysis & Static Guardrails |
 | **Week 3** | **Autonomous Web & Browser Agents** | | |
 | 15 | [Headless Searcher](./days/day-15-headless-searcher) | Playwright, Dynamic CSS Parsers | Web Scraping & Markdown Compilation |

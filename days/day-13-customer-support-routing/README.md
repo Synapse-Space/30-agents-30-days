@@ -53,3 +53,19 @@ Escalation Decision
 - Confidence calibration
 - Multi-language emotion detection
 - Historical customer context
+
+---
+
+## Usage
+
+1. **Install Dependencies:** (Done in project root)
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. **Run the Agent:**
+   ```bash
+   python main.py
+   ```
+3. **Interact:**
+   - **Normal Query** (e.g., "Hi, I forgot my password."): The agent responds with a friendly, standard support style.
+   - **Angry Query** (e.g., "I've been trying this for 3 days! This is terrible!"): The emotion analyzer detects frustration, generates a mock ticket, and switches to an empathetic response mode.
