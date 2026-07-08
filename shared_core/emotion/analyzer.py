@@ -23,7 +23,7 @@ class EmotionAnalyzer:
                 matched_keywords=result["escalation"]
             )
         
-        if negatives >=4:
+        if negatives >=2:
             return EmotionResult(
                 emotion=Emotion.ANGRY,
                 score=0.95,
@@ -31,7 +31,7 @@ class EmotionAnalyzer:
                 matched_keywords=result["negative"]
             )
         
-        if negatives>=2:
+        if negatives>=1:
             return EmotionResult(
                 emotion=Emotion.FRUSTRATED,
                 score=0.75,
@@ -39,7 +39,7 @@ class EmotionAnalyzer:
                 matched_keywords=result["negative"]
             )
         
-        if positives>=2:
+        if positives>=1:
             return EmotionResult(
                 emotion=Emotion.HAPPY,
                 score=0.2,
