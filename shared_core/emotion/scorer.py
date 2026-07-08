@@ -1,10 +1,10 @@
 from .lexicon import POSITIVE, NEGATIVE, ESCALATION
 
-from .utils import tokenize
+from .utils import tokenizer
 
 class EmotionScorer:
     def score(self,text:str):
-        tokens=tokenize(text)
+        tokens=tokenizer(text)
         positive=[]
         negative=[]
         escalation=[]

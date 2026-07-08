@@ -1,7 +1,7 @@
 from .models import Emotion, EmotionResult
 from .scorer import EmotionScorer
 
-class EmotionAnalyer:
+class EmotionAnalyzer:
     def __init__(self):
         self.scorer=EmotionScorer()
         

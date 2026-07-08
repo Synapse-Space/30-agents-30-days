@@ -34,7 +34,7 @@ class CustomerSupportAgent(SupportAgent):
         user_message: str,
     ):
 
-        emotion = self.emotions.analyze(
+        emotion = self.emotion_analyzer.analyze(
             user_message
         )
 
@@ -88,3 +88,10 @@ Customer Message:
             "response": response,
 
         }
+
+    def run(self, user_message: str):
+        return self.respond(user_message)
+
+    def generate(self, prompt: str):
+        response = self.llm.chat(messages=[{"role": "user", "content": prompt}])
+        return response["message"]["content"]
