@@ -42,7 +42,7 @@ To ensure maximum scalability without vendor lock-in or fragile API dependencies
 | 11 | [Deterministic FAQ Guardrail](./days/day-11-deterministic-faq-guardrail) | RapidFuzz, Rule-Based Routing | Merging Rule-based Intents with LLM Fallbacks |
 | 12 | [Contextual Document Q&A](./days/day-12-contextual-document-qa) | Native Text Chunking, In-memory Search | Word Windowing & Overlap Trade-offs |
 | 13 | [Customer Support Router](./days/day-13-customer-support-routing) | Sentiment Analysis, Escalation Triggers | Conditional Routing & Dynamic System Prompts |
-| 14 | [Automated Code Reviewer](./days/day-14-code-reviewer) | Abstract Syntax Trees (AST), Local Models | Code Structural Analysis & Static Guardrails |
+| 14 | [Automated Code Reviewer](./days/day-14-code-review-assistant) | Abstract Syntax Trees (AST), Local Models | Code Structural Analysis & Static Guardrails |
 | **Week 3** | **Autonomous Web & Browser Agents** | | |
 | 15 | [Headless Searcher](./days/day-15-headless-searcher) | Playwright, Dynamic CSS Parsers | Web Scraping & Markdown Compilation |
 | 16 | [E-Commerce Price Monitor](./days/day-16-price-monitor) | Session Cookies, Bypassing Hydration Delays | Handling Single-Page App (SPA) Asynchrony |
