@@ -22,3 +22,10 @@ class PythonCodeReviewAgent(CodeReviewAgent):
 
             "review": explanation,
         }
+
+    def run(self, file_path: str):
+        return self.review(file_path)
+
+    def generate(self, prompt: str):
+        response = self.llm.chat(messages=[{"role": "user", "content": prompt}])
+        return response["message"]["content"]

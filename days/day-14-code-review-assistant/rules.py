@@ -1,6 +1,6 @@
-from review_models import (ReviewFinding, Severity)
+from review_models import (ReviewFinding, Severity, ReviewReport)
 
-class RulesEngine:
+class RuleEngine:
     def evaluate(self,module):
         findings=[]
         for function in module.functions:

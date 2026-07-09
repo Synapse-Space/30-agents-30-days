@@ -3,7 +3,7 @@ from .models import (FunctionInfo, ClassInfo)
 
 class CodeVisitor(ast.NodeVisitor):
     def __init__(self):
-        self.function=[]
+        self.functions=[]
         self.classes=[]
         self.imports=[]
 
