@@ -44,7 +44,7 @@ To ensure maximum scalability without vendor lock-in or fragile API dependencies
 | 13 | [Customer Support Router](./days/day-13-customer-support-routing) | Sentiment Analysis, Escalation Triggers | Conditional Routing & Dynamic System Prompts |
 | 14 | [Automated Code Reviewer](./days/day-14-code-review-assistant) | Abstract Syntax Trees (AST), Local Models | Code Structural Analysis & Static Guardrails |
 | **Week 3** | **Autonomous Web & Browser Agents** | | |
-| 15 | [Headless Searcher](./days/day-15-headless-searcher) | Playwright, Dynamic CSS Parsers | Web Scraping & Markdown Compilation |
+| 15 | [Headless Searcher](./days/day-15-headless-searcher) | Playwright, Wikipedia Search Scraping | Web Scraping & Markdown Compilation |
 | 16 | [E-Commerce Price Monitor](./days/day-16-price-monitor) | Session Cookies, Bypassing Hydration Delays | Handling Single-Page App (SPA) Asynchrony |
 | 17 | [Auto-LinkedIn Metric Scraper](./days/day-17-linkedin-scraper) | Auth-Aware Automated Browser | Secure Cookie Storage & Session Resiliency |
 | 18 | [Multi-Modal Vision Selector](./days/day-18-vision-selector) | GPT-4o-Vision Coordinates | Translating Screenshots to Absolute DOM Coordinates |
