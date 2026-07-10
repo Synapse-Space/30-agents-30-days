@@ -25,10 +25,12 @@ class HeadlessSearchAgent(BrowserAgent):
         documents=[]
 
         with self.open_browser() as page:
-            results=self.searcher.search(page,result.url)
-            documents.append(
-                self.markdown.build(page_data)
-            )
+            results=self.searcher.search(page, query)
+            for result in results:
+                page_data = self.extractor.extract(page, result.url)
+                documents.append(
+                    self.markdown.build(page_data)
+                )
         
         prompt=build_summary_prompt(documents)
 
@@ -38,4 +40,11 @@ class HeadlessSearchAgent(BrowserAgent):
             "documents":documents,
             "summary":summary
         }
+
+    def run(self, query: str):
+        return self.research(query)
+
+    def generate(self, prompt: str):
+        response = self.llm.chat(messages=[{"role": "user", "content": prompt}])
+        return response["message"]["content"]
 

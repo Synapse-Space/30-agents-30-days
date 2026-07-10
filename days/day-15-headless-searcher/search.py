@@ -15,7 +15,7 @@ class GoogleSearcher:
         for card in cards:
             try:
                 title=card.locator("h3").inner_text()
-                href=card.locator("a").first_get_attribute("href")
+                href=card.locator("a").first.get_attribute("href")
                 snippet=""
 
                 try:
@@ -27,9 +27,8 @@ class GoogleSearcher:
                 if href:
                     results.append(SearchResult(title=title,url=href,snippet=snippet))
 
-                
-                except Exception:
-                    continue
+            except Exception:
+                continue
                 
                 if len(results)>=limit:
                     break
