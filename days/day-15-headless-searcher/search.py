@@ -10,16 +10,16 @@ class GoogleSearcher:
         url=self.engine.build_url(query)
         page.goto(url,wait_until="networkidle")
         results=[]
-        cards=page.locator("div.g").all()
+        cards=page.locator("li.mw-search-result").all()
 
         for card in cards:
             try:
-                title=card.locator("h3").inner_text()
-                href=card.locator("a").first.get_attribute("href")
+                title=card.locator(".mw-search-result-heading a").first.inner_text()
+                href="https://en.wikipedia.org" + card.locator(".mw-search-result-heading a").first.get_attribute("href")
                 snippet=""
 
                 try:
-                    snippet=card.locator(".VwiC3b").inner_text()
+                    snippet=card.locator(".searchresult").first.inner_text()
                 
                 except Exception:
                     pass
