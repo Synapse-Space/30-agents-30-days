@@ -10,6 +10,7 @@ from .guardrail_agent import GuardrailAgent
 from .knowledge_agent import KnowledgeAgent
 from .support_agent import SupportAgent
 from .code_review_agent import CodeReviewAgent
+from .browser_agent import BrowserAgent
 
 __all__ = [
     "BaseAgent",
@@ -23,5 +24,6 @@ __all__ = [
     "AgentConfig",
     "SupportAgent",
     "CodeReviewAgent",
+    "BrowserAgent",
     "KnowledgeAgent",
 ]
