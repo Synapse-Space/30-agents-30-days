@@ -29,9 +29,9 @@ class GoogleSearcher:
 
             except Exception:
                 continue
-                
-                if len(results)>=limit:
-                    break
+
+            if len(results)>=limit:
+                break
 
         return results
 
