@@ -1,0 +1,14 @@
+[
+  {
+    "title": "iPhone 16",
+    "price": 999,
+    "currency": "USD",
+    "url": "https://example.com/iphone16"
+  },
+  {
+    "title": "MacBook Air M4",
+    "price": 1199,
+    "currency": "USD",
+    "url": "https://example.com/macbook-air"
+  }
+]
