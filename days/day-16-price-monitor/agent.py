@@ -64,3 +64,10 @@ class DynamicPriceMonitorAgent(
             "summary": summary,
 
         }
+
+    def run(self, previous_snapshots, current_snapshots):
+        return self.monitor(previous_snapshots, current_snapshots)
+
+    def generate(self, prompt: str):
+        response = self.llm.chat(messages=[{"role": "user", "content": prompt}])
+        return response["message"]["content"]

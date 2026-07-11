@@ -17,9 +17,9 @@ class PriceDetector:
             percentage=(difference/old.price)*100
 
             if difference>0:
-                status=PriceStatus.INCRESED
+                status=PriceStatus.INCREASED
             elif difference<0:
-                status=PriceStatus.DECRESED
+                status=PriceStatus.DECREASED
             else:
                 status=PriceStatus.UNCHANGED
 
@@ -27,7 +27,7 @@ class PriceDetector:
             changes.append(
                 PriceChange(
                     title=product.title,
-                    previoud=old.price,
+                    previous=old.price,
                     current=product.price,
                     difference=round(difference,2),
                     percentage=round(percentage,2),

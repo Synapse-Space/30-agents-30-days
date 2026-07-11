@@ -4,6 +4,10 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
 
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+
 from agent import DynamicPriceMonitorAgent
 
 from shared_core.scraping import (

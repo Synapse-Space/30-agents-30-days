@@ -13,6 +13,6 @@ class PriceChange(BaseModel):
     current:float
     difference:float
     percentage:float
-    status:PrinceStatus
+    status:PriceStatus
 
     
