@@ -38,7 +38,7 @@ class ProfileAnalyzerAgent(
 
             page.goto(
                 profile_url,
-                wait_until="networkidle",
+                wait_until="domcontentloaded",
             )
 
             profile = self.extractor.extract(
@@ -67,3 +67,10 @@ class ProfileAnalyzerAgent(
             "summary": summary,
 
         }
+
+    def run(self, profile_url: str):
+        return self.analyze_profile(profile_url)
+
+    def generate(self, prompt: str):
+        response = self.llm.chat(messages=[{"role": "user", "content": prompt}])
+        return response["message"]["content"]

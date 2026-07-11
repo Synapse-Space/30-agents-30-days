@@ -2,7 +2,7 @@ from shared_core.browser import BrowserSession
 
 from .browser_agent import BrowserAgent 
 
-class AuthenticatedBrowserAgent(BaseAgent):
+class AuthenticatedBrowserAgent(BrowserAgent):
     def __init__(self, system_prompt, memory_manager):
         super().__init__(system_prompt,memory_manager)
 
