@@ -46,7 +46,7 @@ To ensure maximum scalability without vendor lock-in or fragile API dependencies
 | **Week 3** | **Autonomous Web & Browser Agents** | | |
 | 15 | [Headless Searcher](./days/day-15-headless-searcher) | Playwright, Wikipedia Search Scraping | Web Scraping & Markdown Compilation |
 | 16 | [E-Commerce Price Monitor](./days/day-16-price-monitor) | Pydantic Schemas, Change Detection | Structured Data Analysis & Alerting Rules |
-| 17 | [Auto-LinkedIn Metric Scraper](./days/day-17-linkedin-scraper) | Auth-Aware Automated Browser | Secure Cookie Storage & Session Resiliency |
+| 17 | [Authenticated Profile Analyzer](./days/day-17-authenticated-profile-analyzer) | Auth-Aware Automated Browser | Secure Cookie Storage & Session Resiliency |
 | 18 | [Multi-Modal Vision Selector](./days/day-18-vision-selector) | GPT-4o-Vision Coordinates | Translating Screenshots to Absolute DOM Coordinates |
 | 19 | [Zero-Selector Web Scraper](./days/day-19-zero-selector) | Vision Feedback Loops | Autonomously Recovering from Broken CSS Selectors |
 | 20 | [Automated Form Filler](./days/day-20-form-filler) | CSV Streaming Pipelines | Batch Ingestion & Dynamic Error Exception Handling |

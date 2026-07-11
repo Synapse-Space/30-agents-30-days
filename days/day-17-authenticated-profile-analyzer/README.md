@@ -20,25 +20,15 @@ Build an AI-powered browser agent that restores an authenticated session, extrac
 ## Architecture
 
 Storage State
-
 ↓
-
 Authentication Manager
-
 ↓
-
 Browser Context
-
 ↓
-
 Profile Extraction
-
 ↓
-
 Metrics Analysis
-
 ↓
-
 LLM Summary
 
 ---
@@ -51,6 +41,30 @@ LLM Summary
 - Structured data extraction
 - Business rule analysis
 - AI-assisted reporting
+
+---
+
+## Usage
+
+1. **Install Dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   playwright install
+   ```
+
+2. **Authenticate (Optional):**
+   - Populate `storage_state.json` with valid LinkedIn session cookies to scrape actual profiles.
+   - If unauthenticated, the agent will gracefully fail over to placeholder data and proceed with AI generation.
+
+3. **Run the Agent:**
+   ```bash
+   python main.py
+   ```
+
+4. **Interact:**
+   - The CLI will prompt you for a "Profile URL >".
+   - Enter a LinkedIn profile link.
+   - It will extract the profile details, compute professional network metrics, and use Ollama to generate an analytical summary.
 
 ---
 
