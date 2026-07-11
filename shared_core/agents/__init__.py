@@ -11,6 +11,7 @@ from .knowledge_agent import KnowledgeAgent
 from .support_agent import SupportAgent
 from .code_review_agent import CodeReviewAgent
 from .browser_agent import BrowserAgent
+from .price_monitor_agent import PriceMonitorAgent
 
 __all__ = [
     "BaseAgent",
@@ -25,5 +26,6 @@ __all__ = [
     "SupportAgent",
     "CodeReviewAgent",
     "BrowserAgent",
+    "PriceMonitorAgent",
     "KnowledgeAgent",
 ]
