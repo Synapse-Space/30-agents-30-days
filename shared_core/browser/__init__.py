@@ -1,7 +1,15 @@
 from .models import (
-    BrowserState,
-    SearchResult,
-    PageContent,
+    SessionState,
+    BrowserSessionInfo,
+    ProfileMetric,
+)
+
+from .storage import (
+    StorageStateManager,
+)
+
+from .auth import (
+    AuthenticationManager,
 )
 
 from .browser_session import BrowserSession
@@ -19,5 +27,15 @@ __all__ = [
     "BrowserSession",
 
     "SearchEngine",
+
+    "SessionState",
+
+    "BrowserSessionInfo",
+
+    "ProfileMetric",
+
+    "StorageStateManager",
+
+    "AuthenticationManager",
 
 ]

@@ -16,3 +16,18 @@ class PageContent(BaseModel):
     title:str
     markdown:str
     
+class SessionState(str, Enum):
+    VALID="valid"
+    EXPIRED="expired"
+    TERMINATED="terminated"
+    UNKNOWN="unknown"
+
+class BrowserSessionInfo(BaseModel):
+    storage_state:str
+    state:SessionState
+
+class ProfileMetric(BaseModel):
+    name:str
+    value:str
+
+    
