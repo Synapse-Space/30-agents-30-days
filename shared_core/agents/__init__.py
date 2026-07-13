@@ -13,6 +13,7 @@ from .code_review_agent import CodeReviewAgent
 from .browser_agent import BrowserAgent
 from .price_monitor_agent import PriceMonitorAgent
 from .authenticated_browser_agent import AuthenticatedBrowserAgent
+from .vision_browser_agent import VisionBrowserAgent
 
 __all__ = [
     "BaseAgent",
@@ -29,5 +30,6 @@ __all__ = [
     "BrowserAgent",
     "AuthenticatedBrowserAgent",
     "PriceMonitorAgent",
+    "VisionBrowserAgent",
     "KnowledgeAgent",
 ]
