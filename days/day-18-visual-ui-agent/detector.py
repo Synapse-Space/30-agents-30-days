@@ -2,7 +2,7 @@ from pathlib import Path
 import ollama
 
 class OllamaVisionDetector:
-    def __init__(self, model="llama3.2-vision"):
+    def __init__(self, model="qwen3-vl:latest"):
         self.model=model 
         
 
