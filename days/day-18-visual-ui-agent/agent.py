@@ -40,6 +40,7 @@ class VisualUIAgent(VisionBrowserAgent):
 
         self.detector=OllamaVisionDetector()
         self.planner=VisualPlanner()
+        self.parser=VisionParser()
     
     def locate(self,page,instruction):
         image=self.screenshots.capture(page)
