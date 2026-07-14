@@ -26,7 +26,7 @@ class VisualInteractionAgent(
 
         self.detector = ComputerUseDetector()
         self.parser = VisionParser()
-        self.planner = TargetPlanner()
+        self.target_planner = TargetPlanner()
         self.recovery = RecoveryManager()
 
     def interact(
@@ -45,7 +45,9 @@ class VisualInteractionAgent(
 
         parsed = self.parser.parse(raw)
 
-        plan = self.planner.choose(parsed)
+        plan = self.target_planner.choose(parsed)
+        if not plan:
+            return {"success": False, "target": None, "reasoning": "No elements found matching the instruction."}
 
         action = self.planner.build(
             plan["element"].label,

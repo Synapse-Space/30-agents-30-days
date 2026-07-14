@@ -77,6 +77,10 @@ def main():
 
         )
 
+    if not result["target"]:
+        console.print(Panel(result["reasoning"], title="AI Reasoning"))
+        return
+
     target = result["target"]["element"]
 
     coords = result["target"]["coordinates"]

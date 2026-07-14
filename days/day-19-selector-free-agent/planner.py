@@ -10,6 +10,9 @@ class TargetPlanner:
         result,
     ):
 
+        if not result.elements:
+            return None
+
         ranked = sorted(
             result.elements,
             key=lambda e: e.confidence,
