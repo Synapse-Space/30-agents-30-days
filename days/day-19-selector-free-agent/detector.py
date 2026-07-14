@@ -2,8 +2,8 @@ from pathlib import Path
 import ollama 
 
 class ComputerUseDetector:
-    def __init__(slef,model="llama3.2-vision"):
-        self.model=model 
+    def __init__(self, model="qwen3-vl:latest"):
+        self.model = model 
 
     def detect(self, image:Path,instruction:str,prompt:str):
         response=ollama.chat(model=self.model,messages=[{

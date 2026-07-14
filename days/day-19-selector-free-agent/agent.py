@@ -91,3 +91,10 @@ class VisualInteractionAgent(
             "reasoning": explanation,
 
         }
+
+    def run(self, page, instruction):
+        return self.interact(page, instruction)
+
+    def generate(self, prompt: str):
+        response = self.llm.chat(messages=[{"role": "user", "content": prompt}])
+        return response["message"]["content"]
