@@ -48,7 +48,7 @@ To ensure maximum scalability without vendor lock-in or fragile API dependencies
 | 16 | [E-Commerce Price Monitor](./days/day-16-price-monitor) | Pydantic Schemas, Change Detection | Structured Data Analysis & Alerting Rules |
 | 17 | [Authenticated Profile Analyzer](./days/day-17-authenticated-profile-analyzer) | Auth-Aware Automated Browser | Secure Cookie Storage & Session Resiliency |
 | 18 | [Visual UI Agent](./days/day-18-visual-ui-agent) | Ollama Vision (Qwen3-VL) | Translating Screenshots to Absolute DOM Coordinates |
-| 19 | [Zero-Selector Web Scraper](./days/day-19-zero-selector) | Vision Feedback Loops | Autonomously Recovering from Broken CSS Selectors |
+| 19 | [Selector-Free Browser Agent](./days/day-19-selector-free-agent) | Vision Feedback Loops, Ollama (Qwen3-VL) | Autonomously Recovering from Broken CSS Selectors |
 | 20 | [Automated Form Filler](./days/day-20-form-filler) | CSV Streaming Pipelines | Batch Ingestion & Dynamic Error Exception Handling |
 | 21 | [Headless Content Publisher](./days/day-21-content-publisher) | Content Management System (CMS) APIs | Draft Syncing, Validation, and State Reporting |
 | **Week 4** | **Enterprise Orchestration & Asynchronous Scaling** | | |
