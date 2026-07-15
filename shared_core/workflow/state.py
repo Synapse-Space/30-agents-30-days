@@ -1,12 +1,27 @@
-from dataclasses import dataclass 
-from typing import Callable
 
-@dataclass(slots=True)
+from .models import WorkflowStatus
+
+
 class WorkflowState:
-    name: str
-    prompt: str
-    validator: Callable[[str],bool] | None = None 
-    error_message: str="Invalid Input."
-    next_state:str|None=None
-    terminal: bool=False
-    
+
+    def __init__(self):
+
+        self.status = WorkflowStatus.PENDING
+
+        self.current_step = 0
+
+    def start(self):
+
+        self.status = WorkflowStatus.RUNNING
+
+    def next(self):
+
+        self.current_step += 1
+
+    def complete(self):
+
+        self.status = WorkflowStatus.COMPLETED
+
+    def fail(self):
+
+        self.status = WorkflowStatus.FAILED
