@@ -5,11 +5,11 @@ Workflow completed.
 
 Status:
 
-{result.status}
+{result['status']}
 
 Completed Steps:
 
-{result.completed_steps}
+{result['completed_steps']}
 
 Explain the execution outcome.
 """

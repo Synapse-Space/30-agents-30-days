@@ -1,4 +1,4 @@
-from .model import WorkflowStep 
+from .models import WorkflowStep 
 
 
 class WorkflowPlanner:
@@ -19,7 +19,7 @@ class WorkflowPlanner:
                     },
             ))
         
-         steps.append(
+        steps.append(
 
             WorkflowStep(
 

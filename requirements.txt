@@ -15,3 +15,5 @@ markdownify>=0.13.1
 beautifulsoup4>=4.12.3
 playwright>=1.48.0
 pillow>=11.0.0
+
+pandas>=2.2.3
