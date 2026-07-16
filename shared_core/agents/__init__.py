@@ -15,7 +15,7 @@ from .price_monitor_agent import PriceMonitorAgent
 from .authenticated_browser_agent import AuthenticatedBrowserAgent
 from .vision_browser_agent import VisionBrowserAgent
 from .selector_free_agent import SelectorFreeAgent
-
+from .workflow_agent import WorkflowAutomationAgent
 
 __all__ = [
     "BaseAgent",
@@ -35,4 +35,5 @@ __all__ = [
     "VisionBrowserAgent",
     "KnowledgeAgent",
     "SelectorFreeAgent",
+    "WorkflowAutomationAgent",
 ]
