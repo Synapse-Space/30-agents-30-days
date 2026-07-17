@@ -15,6 +15,7 @@ from .authenticated_browser_agent import AuthenticatedBrowserAgent
 from .vision_browser_agent import VisionBrowserAgent
 from .selector_free_agent import SelectorFreeAgent
 from .workflow_agent import WorkflowAutomationAgent
+from .content_delivery_agent import ContentDeliveryAgent
 
 __all__ = [
     "BaseAgent",
@@ -34,4 +35,5 @@ __all__ = [
     "KnowledgeAgent",
     "SelectorFreeAgent",
     "WorkflowAutomationAgent",
+    "ContentDeliveryAgent",
 ]
