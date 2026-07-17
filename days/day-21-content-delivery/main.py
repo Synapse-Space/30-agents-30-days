@@ -3,6 +3,10 @@ from rich.console import Console
 from rich.panel import Panel 
 from rich.table import Table 
 
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+
 from agent import CMSPublishingAgent
 
 from shared_core.publishing import ContentDraft, ContentType
@@ -31,8 +35,9 @@ def load_markdown():
 def main():
     banner()
     postgres=PostgresClient("postgresql://postgres:postgres@localhost:5432/ai_agents")
-    repository=MemoryManager(repository)
-    agent=CMSPublishingAgent(memory_manager=manager)
+    repository = MemoryRepository(postgres)
+    manager = MemoryManager(repository)
+    agent = CMSPublishingAgent(memory_manager=manager)
     draft=ContentDraft(
         title="Building AI Agents",
         body=load_markdown(),
@@ -40,7 +45,7 @@ def main():
     )
     with agent.open_authenticated_browser() as page:
         page.goto(
-            "https://your-cms.example.com",wait_until="networkidle"
+            "https://example.com/",wait_until="networkidle"
         )
 
         result = agent.publish(page, draft)

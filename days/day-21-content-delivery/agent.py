@@ -63,4 +63,9 @@ class CMSPublishingAgent(ContentDeliveryAgent):
 
         }
 
-        
+    def run(self, page, draft):
+        return self.publish(page, draft)
+
+    def generate(self, prompt: str):
+        response = self.llm.chat(messages=[{"role": "user", "content": prompt}])
+        return response["message"]["content"]

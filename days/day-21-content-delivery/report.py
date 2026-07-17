@@ -5,11 +5,11 @@ Publishing completed.
 
 Status:
 
-{result.status}
+{result['status']}
 
 Preview:
 
-{result.preview_url}
+{result['preview_url']}
 
 Explain the publishing result.
 """
