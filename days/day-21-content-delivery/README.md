@@ -21,29 +21,17 @@ Build an AI-powered publishing agent that reads Markdown content, validates it, 
 ## Architecture
 
 Markdown
-
 ↓
-
 Formatter
-
 ↓
-
 Validator
-
 ↓
-
 CMS Adapter
-
 ↓
-
 Publishing Workflow
-
 ↓
-
 Preview Extraction
-
 ↓
-
 Publishing Report
 
 ---
@@ -56,6 +44,27 @@ Publishing Report
 - Adapter design pattern
 - Browser automation
 - Workflow orchestration
+
+---
+
+## Usage
+
+1. **Install Dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   playwright install
+   ```
+
+2. **Run the Agent:**
+   ```bash
+   python main.py
+   ```
+
+3. **Execution Flow:**
+   - The script loads a dummy markdown file `sample.md` (which you can populate with actual content).
+   - The agent prepares the draft and navigates to the CMS editor.
+   - It delegates interaction to the `CMSAdapter` which programmatically fills the title and body and saves the draft.
+   - The LLM receives the completion status and provides a summary.
 
 ---
 
