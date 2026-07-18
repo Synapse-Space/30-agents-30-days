@@ -16,7 +16,7 @@ from .vision_browser_agent import VisionBrowserAgent
 from .selector_free_agent import SelectorFreeAgent
 from .workflow_agent import WorkflowAutomationAgent
 from .content_delivery_agent import ContentDeliveryAgent
-
+from .reflective_reasoning_agent import ReflectionReasoningAgent
 __all__ = [
     "BaseAgent",
     "StructuredAgent",
@@ -36,4 +36,5 @@ __all__ = [
     "SelectorFreeAgent",
     "WorkflowAutomationAgent",
     "ContentDeliveryAgent",
+    "ReflectionReasoningAgent",
 ]
