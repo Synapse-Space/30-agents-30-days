@@ -10,7 +10,7 @@ def build_graph(writer,critic,controller):
     graph.set_entry_point("writer")
 
     graph.add_edge("writer", "critic")
-    graph.add_conditional_adges("critic", controller.next,{"writer":"writer", "finish":END})
+    graph.add_conditional_edges("critic", controller.next,{"writer":"writer", "finish":END})
 
     return graph.compile()
     

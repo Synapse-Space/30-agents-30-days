@@ -6,13 +6,11 @@ class WriterNode(GraphNode):
 
     def run(self,state):
         prompt=f"""User Request:
-        {state.prompt}
+        {state.get('prompt', '')}
         Previous Feedback:
-        {state.feedback}
+        {state.get('feedback', '')}
         Write the best possible answer.
         """
         response=self.llm.invoke(prompt)
-        state.answer=response 
-        state.iteration+=1
-        return state 
+        return {"answer": response.content, "iteration": state.get("iteration", 0) + 1}
         

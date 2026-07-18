@@ -4,10 +4,10 @@ class ReflectionController:
 
     
     def next(self, state):
-        if state.score>=self.threshold:
+        if state.get("score", 0.0) >= self.threshold:
             return "finish"
         
-        if state.iteration>=state.max_iterations:
+        if state.get("iteration", 0) >= state.get("max_iterations", 5):
             return "finish"
 
         

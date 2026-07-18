@@ -3,6 +3,9 @@ from rich.panel import Panel
 from rich.table import Table
 
 from langchain_ollama import ChatOllama
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
 from agent import ReflectionGraphAgent
 
@@ -43,7 +46,7 @@ def main():
 
     llm = ChatOllama(
 
-        model="llama3.1:8b"
+        model="llama3.1:latest"
 
     )
 
