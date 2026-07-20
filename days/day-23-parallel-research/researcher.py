@@ -1,14 +1,13 @@
 from shared_core.multi_agent import Worker 
+from prompts import MARKET_PROMPT, TECH_PROMPT, TRENDS_PROMPT
 
 class MarketResearcher(Worker):
     def __init__(self,llm):
         self.llm=llm
 
     def run(self,state):
-        state.market=self.llm.invoke(f"{state.query}\n\n{MARKET_PROMPT}")
-
-        state.completed+=1
-        return state 
+        response=self.llm.invoke(f"{state.get('query', '')}\n\n{MARKET_PROMPT}")
+        return {"market": response.content, "completed": state.get("completed", 0) + 1}
 
 
 class TechnologyResearcher(Worker):
@@ -16,10 +15,8 @@ class TechnologyResearcher(Worker):
         self.llm=llm
 
     def run(self,state):
-        state.technology=self.llm.invoke(f"{state.query}\n\n{TECHNOLOGY_PROMPT}")
-
-        state.completed+=1
-        return state 
+        response=self.llm.invoke(f"{state.get('query', '')}\n\n{TECH_PROMPT}")
+        return {"technology": response.content, "completed": state.get("completed", 0) + 1}
 
 
 class TrendsResearcher(Worker):
@@ -27,7 +24,5 @@ class TrendsResearcher(Worker):
         self.llm=llm
 
     def run(self,state):
-        state.trends=self.llm.invoke(f"{state.query}\n\n{TRENDS_PROMPT}")
-
-        state.completed+=1
-        return state 
+        response=self.llm.invoke(f"{state.get('query', '')}\n\n{TRENDS_PROMPT}")
+        return {"trends": response.content, "completed": state.get("completed", 0) + 1}

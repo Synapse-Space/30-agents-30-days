@@ -3,19 +3,19 @@ class ExecutiveReportGenerator:
         self.llm=llm 
 
     def run(self, state):
-        prompt=f""" Research Topic: {state.query}
+        prompt=f""" Research Topic: {state.get('query', '')}
         
         Market Report:
-        {state.market}
+        {state.get('market', '')}
 
         Technology Analysis:
-        {state.technology}
+        {state.get('technology', '')}
 
         Trends:
-        {state.trends}
+        {state.get('trends', '')}
 
         Create a Unified executive report.
         """
 
-        state.executive_report=self.llm.invoke(prompt)
-        return state 
+        response=self.llm.invoke(prompt)
+        return {"executive_report": response.content}

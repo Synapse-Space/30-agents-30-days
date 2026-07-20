@@ -25,10 +25,24 @@ class ResearchTeamAgent(ParallelResearchAgent):
         
     
     def research(self, query):
-        state=ResearchState()
-        state.query=query
-        result=self.graph.invoke(state)
-        return {
-            "report":result.executive_report,
-            "completed_workers": result.completed 
+        initial_state = {
+            "query": query,
+            "results": [],
+            "completed": 0,
+            "expected_workers": 3,
+            "market": "",
+            "technology": "",
+            "trends": "",
+            "executive_report": ""
         }
+        result = self.graph.invoke(initial_state)
+        return {
+            "report":result.get("executive_report", ""),
+            "completed_workers": result.get("completed", [])
+        }
+
+    def run(self, query):
+        return self.research(query)
+
+    def generate(self, prompt: str):
+        pass

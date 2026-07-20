@@ -1,8 +1,8 @@
-from shared_core.multi_agent import TeamState, Supervisor, ResultAggregator, MultiAgentBuilder 
+from shared_core.multi_agent import TeamState, Supervisor, ResultAggregator, MultiAgentBuilder
 
-from .reflective_reasoning_agent import ReflectiveReasoningAgent 
+from .reflective_reasoning_agent import ReflectionReasoningAgent 
 
-class ParallelResearchAgent(ReflectiveReasoningAgent):
+class ParallelResearchAgent(ReflectionReasoningAgent):
     def __init__(self, system_prompt, memory_manager):
         super().__init__(system_prompt, memory_manager)
 

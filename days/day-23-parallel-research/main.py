@@ -5,7 +5,11 @@ from rich.table import Table
 
 from langchain_ollama import ChatOllama
 
-from agent import ParallelResearchGraphAgent
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+
+from agent import ResearchTeamAgent
 
 from shared_core.memory.postgres import (
     PostgresClient,
@@ -44,7 +48,7 @@ def main():
 
     llm = ChatOllama(
 
-        model="llama3.1:8b"
+        model="llama3.1:latest"
 
     )
 
@@ -58,7 +62,7 @@ def main():
 
     manager = MemoryManager(repository)
 
-    agent = ParallelResearchGraphAgent(
+    agent = ResearchTeamAgent(
 
         llm,
 
@@ -87,7 +91,7 @@ def main():
 
         "Workers",
 
-        str(result["workers"]),
+        str(result.get("completed_workers", [])),
 
     )
 
@@ -95,7 +99,7 @@ def main():
 
         "Status",
 
-        result["status"],
+        "Completed",
 
     )
 
