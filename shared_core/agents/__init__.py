@@ -17,6 +17,7 @@ from .selector_free_agent import SelectorFreeAgent
 from .workflow_agent import WorkflowAutomationAgent
 from .content_delivery_agent import ContentDeliveryAgent
 from .reflective_reasoning_agent import ReflectionReasoningAgent
+from .parallel_research_agent import ParallelResearchAgent 
 __all__ = [
     "BaseAgent",
     "StructuredAgent",
@@ -37,4 +38,5 @@ __all__ = [
     "WorkflowAutomationAgent",
     "ContentDeliveryAgent",
     "ReflectionReasoningAgent",
+    "ParallelResearchAgent",
 ]
