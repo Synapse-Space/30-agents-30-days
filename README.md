@@ -53,7 +53,7 @@ To ensure maximum scalability without vendor lock-in or fragile API dependencies
 | 21 | [Content Delivery Agent](./days/day-21-content-delivery) | Content Management System (CMS) APIs | Draft Syncing, Validation, and State Reporting |
 | **Week 4** | **Enterprise Orchestration & Asynchronous Scaling** | | |
 | 22 | [Reflective Reasoning Agent](./days/day-22-reflective-reasoning) | LangGraph, Iterative Nodes | Writer-Critic Node Synchronization |
-| 23 | [Parallel Research Agent](./days/day-23-parallel-researcher) | Supervisor Design Pattern, Concurrency | Multi-threaded Fan-out & Report Compilations |
+| 23 | [Parallel Research Agent](./days/day-23-parallel-research) | Supervisor Design Pattern, Concurrency | Multi-threaded Fan-out & Report Compilations |
 | 24 | [Local Embedding Pipeline](./days/day-24-local-embedding) | HuggingFace, PostgreSQL + `pgvector` | Vector Clustering, Dimensionality, Index Optimization |
 | 25 | [Contextual RAG Engine](./days/day-25-contextual-rag) | Global Text Chunk Summarizations | Minimizing Information Loss in Heavy Enterprise Docs |
 | 26 | [Asynchronous Ingestion Worker](./days/day-26-pgboss-ingestion) | `pg-boss` Job Queuing, FastAPIs | Decoupling HTTP Requests from Heavy AI Pipelines |

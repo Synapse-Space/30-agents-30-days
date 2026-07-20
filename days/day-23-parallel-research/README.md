@@ -20,21 +20,13 @@ Build a LangGraph-based multi-agent research system where a supervisor distribut
 ## Architecture
 
 Query
-
 ↓
-
 Supervisor
-
 ↓
-
-Parallel Researchers
-
+Parallel Researchers (Market, Tech, Trends)
 ↓
-
 Aggregator
-
 ↓
-
 Executive Report
 
 ---
@@ -47,6 +39,27 @@ Executive Report
 - Shared state management
 - Result aggregation
 - Collaborative AI systems
+
+---
+
+## Usage
+
+1. **Install Dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **Run the Agent:**
+   ```bash
+   python main.py
+   ```
+
+3. **Execution Flow:**
+   - Input a research topic when prompted (e.g., `Research Topic > Quantum Computing`).
+   - The graph executes in parallel, fanning out the query to three different specialized researchers: `MarketResearcher`, `TechnologyResearcher`, and `TrendsResearcher`.
+   - The state is merged concurrently using `typing.Annotated` and `operator.add` to track the number of completed workers.
+   - An `ExecutiveReportGenerator` receives the compiled research and generates a final unified report.
+   - A summary of the execution is printed alongside the final executive report.
 
 ---
 
