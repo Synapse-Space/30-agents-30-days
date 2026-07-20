@@ -1,8 +1,8 @@
-from typing import TypedDict, List, Any
+from typing import TypedDict, List, Any, Annotated
+import operator
 
 class TeamState(TypedDict):
     query: str
-    results: List[Any]
-    completed: int
+    results: Annotated[List[Any], operator.add]
+    completed: Annotated[int, operator.add]
     expected_workers: int
-        

@@ -7,7 +7,7 @@ class MarketResearcher(Worker):
 
     def run(self,state):
         response=self.llm.invoke(f"{state.get('query', '')}\n\n{MARKET_PROMPT}")
-        return {"market": response.content, "completed": state.get("completed", 0) + 1}
+        return {"market": response.content, "completed": 1}
 
 
 class TechnologyResearcher(Worker):
@@ -16,7 +16,7 @@ class TechnologyResearcher(Worker):
 
     def run(self,state):
         response=self.llm.invoke(f"{state.get('query', '')}\n\n{TECH_PROMPT}")
-        return {"technology": response.content, "completed": state.get("completed", 0) + 1}
+        return {"technology": response.content, "completed": 1}
 
 
 class TrendsResearcher(Worker):
@@ -25,4 +25,4 @@ class TrendsResearcher(Worker):
 
     def run(self,state):
         response=self.llm.invoke(f"{state.get('query', '')}\n\n{TRENDS_PROMPT}")
-        return {"trends": response.content, "completed": state.get("completed", 0) + 1}
+        return {"trends": response.content, "completed": 1}
