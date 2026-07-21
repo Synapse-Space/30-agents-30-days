@@ -18,6 +18,7 @@ from .workflow_agent import WorkflowAutomationAgent
 from .content_delivery_agent import ContentDeliveryAgent
 from .reflective_reasoning_agent import ReflectionReasoningAgent
 from .parallel_research_agent import ParallelResearchAgent 
+from .knowledge_ingestion_agent import KnowledgeIngestionAgent
 __all__ = [
     "BaseAgent",
     "StructuredAgent",
@@ -39,4 +40,5 @@ __all__ = [
     "ContentDeliveryAgent",
     "ReflectionReasoningAgent",
     "ParallelResearchAgent",
+    "KnowledgeIngestionAgent",
 ]
