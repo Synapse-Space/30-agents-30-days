@@ -15,7 +15,6 @@ class LocalEmbeddingAgent(KnowledgeIngestionAgent):
         super().__init__(SYSTEM_PROMPT, memory_manager)
 
         self.embedder=LocalEmbedder()
-        self.repository=PgVectorRepository()
         self.repository=PgVectorRepository(
             "postgresql://postgres:postgres@localhost:5432/ai_agents"
         )
@@ -29,3 +28,12 @@ class LocalEmbeddingAgent(KnowledgeIngestionAgent):
             "chunks":total,
             "summary":summary,
         }
+
+    def run(self, filepath):
+        return self.ingest(filepath)
+
+    def generate(self, prompt: str):
+        from langchain_ollama import ChatOllama
+        llm = ChatOllama(model="llama3.1:latest")
+        response = llm.invoke(prompt)
+        return response.content

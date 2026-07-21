@@ -29,7 +29,7 @@
 #         return docs
 
 from pathlib import Path 
-from .nodels import Document 
+from .models import Document 
 
 class DocumentLoader:
     def load(self, filepath):
