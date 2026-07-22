@@ -54,8 +54,8 @@ To ensure maximum scalability without vendor lock-in or fragile API dependencies
 | **Week 4** | **Enterprise Orchestration & Asynchronous Scaling** | | |
 | 22 | [Reflective Reasoning Agent](./days/day-22-reflective-reasoning) | LangGraph, Iterative Nodes | Writer-Critic Node Synchronization |
 | 23 | [Parallel Research Agent](./days/day-23-parallel-research) | Supervisor Design Pattern, Concurrency | Multi-threaded Fan-out & Report Compilations |
-| 24 | [Local Embedding Pipeline](./days/day-24-local-embedding) | HuggingFace, PostgreSQL + `pgvector` | Vector Clustering, Dimensionality, Index Optimization |
-| 25 | [Contextual RAG Engine](./days/day-25-contextual-rag) | Global Text Chunk Summarizations | Minimizing Information Loss in Heavy Enterprise Docs |
+| 24 | [Knowledge Ingestion Engine](./days/day-24-knowledge-ingestion) | HuggingFace, PostgreSQL + `pgvector` | Vector Clustering, Chunking, Index Optimization |
+| 25 | [Contextual RAG Agent](./days/day-25-contextual-rag) | Anthropic Contextual Retrieval, Ollama | Document Summarization & Grounded Semantic Retrieval |
 | 26 | [Asynchronous Ingestion Worker](./days/day-26-pgboss-ingestion) | `pg-boss` Job Queuing, FastAPIs | Decoupling HTTP Requests from Heavy AI Pipelines |
 | 27 | [Self-Healing Error Recovery Worker](./days/day-27-self-healing-worker) | State Loop Backtracking, Queue Retries | Runtime Stack-Trace Evaluation & Code Rewriting |
 | 28 | [Dual-Core Dialogue Hybrid](./days/day-28-dual-core-hybrid) | Rasa Engine + LangGraph Routing | Deterministic Intent Boundary Management |
