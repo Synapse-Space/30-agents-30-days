@@ -19,6 +19,7 @@ from .content_delivery_agent import ContentDeliveryAgent
 from .reflective_reasoning_agent import ReflectionReasoningAgent
 from .parallel_research_agent import ParallelResearchAgent 
 from .knowledge_ingestion_agent import KnowledgeIngestionAgent
+from .contextual_rag_agent import ContextualRAGAgent
 __all__ = [
     "BaseAgent",
     "StructuredAgent",
@@ -41,4 +42,5 @@ __all__ = [
     "ReflectionReasoningAgent",
     "ParallelResearchAgent",
     "KnowledgeIngestionAgent",
+    "ContextualRAGAgent",
 ]
