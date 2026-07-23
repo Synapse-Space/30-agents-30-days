@@ -20,6 +20,7 @@ from .reflective_reasoning_agent import ReflectionReasoningAgent
 from .parallel_research_agent import ParallelResearchAgent 
 from .knowledge_ingestion_agent import KnowledgeIngestionAgent
 from .contextual_rag_agent import ContextualRAGAgent
+from .async_document_ingestion_agent import AsyncDocumentIngestionAgent
 __all__ = [
     "BaseAgent",
     "StructuredAgent",
@@ -43,4 +44,5 @@ __all__ = [
     "ParallelResearchAgent",
     "KnowledgeIngestionAgent",
     "ContextualRAGAgent",
+    "AsyncDocumentIngestionAgent",
 ]
