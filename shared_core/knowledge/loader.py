@@ -1,38 +1,20 @@
-# from pathlib import Path 
-# from .models import Document
-
-# class DocumentLoader:
-#     SUPPORTED_TYPES={".txt",".md"}
-
-#     def load(self, path:str)->Document:
-#         file=Path(path)
-#         if not file.exists():
-#             raise FileNotFoundError(path)
-        
-#         if file.suffix not in self.SUPPORTED_TYPES:
-#             raise ValueError(f"unsupported_format{file.suffix}")
-
-    
-#         return Document(
-#             name=file.name,
-#             path=str(file),
-#             content=file.read_text(encoding="utf-8"),
-            
-#         )
-
-#     def load_directory(self, directory:str)->list[Document]:
-#         docs=[]
-#         folder=Path(directory)
-#         for file in folder.iterdir():
-#             if file.suffix in self.SUPPORTED_TYPES:
-#                 docs.append(self.load(str(file)))
-#         return docs
-
 from pathlib import Path 
 from .models import Document 
 
 class DocumentLoader:
     def load(self, filepath):
-        text=Path(filepath).read_text()
-        return Document(id=Path(filepath).stem,source=filepath,content=text)
-        
+        path = Path(filepath)
+        if not path.exists():
+            raise FileNotFoundError(f"File not found: {filepath}")
+
+        if path.suffix.lower() == ".pdf":
+            try:
+                import pypdf
+                reader = pypdf.PdfReader(str(path))
+                text = "\n\n".join(page.extract_text() or "" for page in reader.pages)
+            except Exception as e:
+                text = path.read_text(encoding="utf-8", errors="ignore")
+        else:
+            text = path.read_text(encoding="utf-8", errors="ignore")
+            
+        return Document(id=path.stem, source=str(filepath), content=text)
