@@ -56,7 +56,7 @@ To ensure maximum scalability without vendor lock-in or fragile API dependencies
 | 23 | [Parallel Research Agent](./days/day-23-parallel-research) | Supervisor Design Pattern, Concurrency | Multi-threaded Fan-out & Report Compilations |
 | 24 | [Knowledge Ingestion Engine](./days/day-24-knowledge-ingestion) | HuggingFace, PostgreSQL + `pgvector` | Vector Clustering, Chunking, Index Optimization |
 | 25 | [Contextual RAG Agent](./days/day-25-contextual-rag) | Anthropic Contextual Retrieval, Ollama | Document Summarization & Grounded Semantic Retrieval |
-| 26 | [Asynchronous Ingestion Worker](./days/day-26-pgboss-ingestion) | `pg-boss` Job Queuing, FastAPIs | Decoupling HTTP Requests from Heavy AI Pipelines |
+| 26 | [Asynchronous Ingestion Worker](./days/day-26-async-ingestion) | Async Job Queue, Worker Architecture, FastAPI | Decoupling Heavy AI Workloads & Job State Tracking |
 | 27 | [Self-Healing Error Recovery Worker](./days/day-27-self-healing-worker) | State Loop Backtracking, Queue Retries | Runtime Stack-Trace Evaluation & Code Rewriting |
 | 28 | [Dual-Core Dialogue Hybrid](./days/day-28-dual-core-hybrid) | Rasa Engine + LangGraph Routing | Deterministic Intent Boundary Management |
 | 29 | [Distributed Log-Analysis Monitor](./days/day-29-log-monitor) | Streaming WebSockets, Security Filtering | Real-time Anomaly Vectors over Streaming Logs |
@@ -78,10 +78,10 @@ The repository is built as an organized monorepo, ensuring core architectural bo
 │   ├── day-01-react-calculator/
 │   │   ├── agent.py
 │   │   └── README.md             # Architecture diagram & lessons learned
-│   └── day-26-pgboss-ingestion/  
-│       ├── docker-compose.yml    # Spin up local Postgres infrastructure
-│       ├── api_server/           # Web entry point
-│       └── worker_node/          # Asynchronous job consumers
+│   └── day-26-async-ingestion/  
+│       ├── main.py               # Interactive CLI runner & job status monitor
+│       ├── worker.py             # Asynchronous background document ingestor
+│       └── job_queue.py          # Job queuing & state tracking
 └── README.md                     # Master Directory
 ```
 
