@@ -57,7 +57,7 @@ To ensure maximum scalability without vendor lock-in or fragile API dependencies
 | 24 | [Knowledge Ingestion Engine](./days/day-24-knowledge-ingestion) | HuggingFace, PostgreSQL + `pgvector` | Vector Clustering, Chunking, Index Optimization |
 | 25 | [Contextual RAG Agent](./days/day-25-contextual-rag) | Anthropic Contextual Retrieval, Ollama | Document Summarization & Grounded Semantic Retrieval |
 | 26 | [Asynchronous Ingestion Worker](./days/day-26-async-ingestion) | Async Job Queue, Worker Architecture, FastAPI | Decoupling Heavy AI Workloads & Job State Tracking |
-| 27 | [Self-Healing Error Recovery Worker](./days/day-27-self-healing-worker) | State Loop Backtracking, Queue Retries | Runtime Stack-Trace Evaluation & Code Rewriting |
+| 27 | [Self-Healing Error Recovery Worker](./days/day-27-self-healing-worker) | Celery, Redis, Ollama, Exception Recovery | Autonomous Error Analysis, LLM Payload Repair & Retry Loops |
 | 28 | [Dual-Core Dialogue Hybrid](./days/day-28-dual-core-hybrid) | Rasa Engine + LangGraph Routing | Deterministic Intent Boundary Management |
 | 29 | [Distributed Log-Analysis Monitor](./days/day-29-log-monitor) | Streaming WebSockets, Security Filtering | Real-time Anomaly Vectors over Streaming Logs |
 | 30 | [The Autonomous Solution Architect](./days/day-30-solution-architect) | Full Integration Architecture | Microservice Orchestration & End-to-End Synergy |
