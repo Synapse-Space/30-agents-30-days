@@ -5,6 +5,11 @@ from .models import (
     JobStatus,
 )
 
+from .exceptions import (
+    RecoveryException,
+    RetryLimitExceeded,
+)
+
 from .analyzer import ErrorAnalyzer
 from .repair import RepairEngine
 from .retry import RetryPolicy
@@ -15,6 +20,8 @@ __all__ = [
     "ErrorContext",
     "RepairSuggestion",
     "JobStatus",
+    "RecoveryException",
+    "RetryLimitExceeded",
     "ErrorAnalyzer",
     "RepairEngine",
     "RetryPolicy",
