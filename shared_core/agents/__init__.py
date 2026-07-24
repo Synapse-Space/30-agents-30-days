@@ -21,6 +21,7 @@ from .parallel_research_agent import ParallelResearchAgent
 from .knowledge_ingestion_agent import KnowledgeIngestionAgent
 from .contextual_rag_agent import ContextualRAGAgent
 from .async_document_ingestion_agent import AsyncDocumentIngestionAgent
+from .self_healing_worker_agent import SelfHealingWorkerAgent
 __all__ = [
     "BaseAgent",
     "StructuredAgent",
@@ -45,4 +46,5 @@ __all__ = [
     "KnowledgeIngestionAgent",
     "ContextualRAGAgent",
     "AsyncDocumentIngestionAgent",
+    "SelfHealingWorkerAgent",
 ]
