@@ -31,4 +31,5 @@ uvicorn>=0.32.0
 
 celery>=5.4.0
 redis>=5.2.0
-rasa>=3.6.20
+# Rasa is integrated via REST API/abstractions; native package requires Python <= 3.10
+# rasa>=3.6.20
