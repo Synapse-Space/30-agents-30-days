@@ -8,8 +8,10 @@ class EnterpriseRasaEngine(RasaEngine):
         if not getattr(state, "active_form", None):
             state.active_form = "account"
             state.context["step"] = "full_name"
+            response_text = "[Rasa Workflow] Starting Bank Account Application.\nStep 1/2: Please enter your Full Name:"
+            self._record_history(state, message, response_text)
             return DialogueResponse(
-                response="[Rasa Workflow] Starting Bank Account Application.\nStep 1/2: Please enter your Full Name:",
+                response=response_text,
                 engine=DialogueEngine.RASA,
                 metadata={"form": "account", "step": "full_name"}
             )
@@ -19,8 +21,10 @@ class EnterpriseRasaEngine(RasaEngine):
         if step == "full_name":
             state.slots["full_name"] = text
             state.context["step"] = "email"
+            response_text = f"[Rasa Workflow] Thank you, {text}.\nStep 2/2: Please enter your Email Address:"
+            self._record_history(state, message, response_text)
             return DialogueResponse(
-                response=f"[Rasa Workflow] Thank you, {text}.\nStep 2/2: Please enter your Email Address:",
+                response=response_text,
                 engine=DialogueEngine.RASA,
                 metadata={"form": "account", "step": "email", "slots": state.slots}
             )
@@ -34,13 +38,22 @@ class EnterpriseRasaEngine(RasaEngine):
             state.active_form = None
             state.context.clear()
 
+            response_text = f"✅ [Rasa Workflow] Account Application Submitted Successfully!\n• Name: {full_name}\n• Email: {email}\n• Status: Application Queued for Verification"
+            self._record_history(state, message, response_text)
             return DialogueResponse(
-                response=f"✅ [Rasa Workflow] Account Application Submitted Successfully!\n• Name: {full_name}\n• Email: {email}\n• Status: Application Queued for Verification",
+                response=response_text,
                 engine=DialogueEngine.RASA,
                 metadata={"form": "account", "status": "submitted", "slots": dict(state.slots)}
             )
 
+        response_text = "Welcome to Enterprise Banking. How can I help you today?"
+        self._record_history(state, message, response_text)
         return DialogueResponse(
-            response="Welcome to Enterprise Banking. How can I help you today?",
+            response=response_text,
             engine=DialogueEngine.RASA,
         )
+
+    def _record_history(self, state, user_msg, assistant_msg):
+        if hasattr(state, "history") and isinstance(state.history, list):
+            state.history.append({"role": "user", "content": user_msg})
+            state.history.append({"role": "assistant", "content": assistant_msg})
