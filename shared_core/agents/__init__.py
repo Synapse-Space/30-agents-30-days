@@ -23,6 +23,8 @@ from .contextual_rag_agent import ContextualRAGAgent
 from .async_document_ingestion_agent import AsyncDocumentIngestionAgent
 from .self_healing_worker_agent import SelfHealingWorkerAgent
 from .hybrid_dialogue_agent import HybridDialogueAgent
+from .distributed_log_monitoring_agent import DistributedLogMonitoringAgent
+
 __all__ = [
     "BaseAgent",
     "StructuredAgent",
@@ -48,5 +50,6 @@ __all__ = [
     "ContextualRAGAgent",
     "AsyncDocumentIngestionAgent",
     "SelfHealingWorkerAgent",
-    "HybridDialogueAgent"
+    "HybridDialogueAgent",
+    "DistributedLogMonitoringAgent"
 ]

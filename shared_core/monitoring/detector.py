@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 from .models import LogEvent, MonitoringResult
 
-class AnamolyDetector(ABC):
+class AnomalyDetector(ABC):
     @abstractmethod
-    async def detect(self, event: LogEvent)-> MonitoringResult:
+    async def detect(self, event: LogEvent) -> MonitoringResult:
         """Detect anomalies."""
