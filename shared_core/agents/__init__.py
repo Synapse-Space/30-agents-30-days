@@ -24,6 +24,8 @@ from .async_document_ingestion_agent import AsyncDocumentIngestionAgent
 from .self_healing_worker_agent import SelfHealingWorkerAgent
 from .hybrid_dialogue_agent import HybridDialogueAgent
 from .distributed_log_monitoring_agent import DistributedLogMonitoringAgent
+from .solution_architect_agent import SolutionArchtectAgent
+
 
 __all__ = [
     "BaseAgent",
@@ -51,5 +53,6 @@ __all__ = [
     "AsyncDocumentIngestionAgent",
     "SelfHealingWorkerAgent",
     "HybridDialogueAgent",
-    "DistributedLogMonitoringAgent"
+    "DistributedLogMonitoringAgent",
+    "SolutionArchtectAgent"
 ]
