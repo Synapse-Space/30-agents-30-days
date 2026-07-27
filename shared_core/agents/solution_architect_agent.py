@@ -1,12 +1,19 @@
 from shared_core.orchestration import WorkflowEngine, Supervisor, WorkflowPlanner, AgentRegistry
-
 from .base_agent import BaseAgent
 
-class SolutionArchtectAgent(BaseAgent):
-    def __init__(self, system_prompt, memory_manger):
-        super().__init__(system_prompt, memory_manger)
-        self.registry=AgentRegistry()
+class SolutionArchitectAgent(BaseAgent):
+    def __init__(self, system_prompt: str = "Solution Architect Agent", memory_manager=None):
+        super().__init__(system_prompt)
+        self.registry = AgentRegistry()
+        self.supervisor = Supervisor(planner=None, registry=self.registry)
+        self.workflow = WorkflowEngine(self.supervisor)
 
-        self.supervisor=Supervisor(planner=None, registry=self.registry)
+    def run(self, objective, *args, **kwargs):
+        import asyncio
+        return asyncio.run(self.solve(objective))
 
-        self.workflow=WorkflowEngine(self.supervisor)
+    async def solve(self, objective):
+        return await self.workflow.run(objective)
+
+# Alias to support both SolutionArchitectAgent and SolutionArchtectAgent
+SolutionArchtectAgent = SolutionArchitectAgent
